@@ -78,7 +78,7 @@ const BlogPage = ({data}) => {
           method: 'get',
           headers: {
             'Content-Type': 'application/json',
-            "Authorization": 'Basic ' + btoa(apikey + ':' + password)
+            'X-Shopify-Access-Token': password
           },
           auth: {
             username: apikey,
