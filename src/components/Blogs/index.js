@@ -57,6 +57,9 @@ const Blogs = ({id}) => {
       }
     `)
   const token = "8688ae404288aacf2fd070b0bf36952a"
+  const apikey = "1bd559b0e2f7a65ee790852e9d01fa1d"
+  const password = "8e8aac347316f0b5b7e7b5897188a365"
+  const shopURL = "chirofoam.myshopify.com"
   const pageInfo = allShopifyArticle.pageInfo
   const currentPage = pageInfo.currentPage
   const previousPage = (currentPage === 1)
@@ -84,13 +87,13 @@ const Blogs = ({id}) => {
   }
   const fetchLikeCount = (index, articleId, blogId) => {
     if(pageLoaded){
-      console.log(index, articleId, blogId)
-      // const getData = {
-      //   "api": `/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields.json`,
-      //   "namespace": "postlike",
-      //   "value_type": "string",
-      //   "fields": "namespace,key,value"
-      // }
+      const apiURL = `${reuestURL}/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json`
+      const getData = {
+        "namespace": "postlike",
+        "value_type": "string",
+        "fields": "namespace,key,value"
+      }
+      console.log(index, apiURL, getData)
       // const reqData = jsonToQueryString(getData)
       // const fetchData = (async (URL) => {
       //   return await fetch(URL, {
