@@ -3,6 +3,7 @@ import Header from "~/components/header"
 import Footer from "~/components/footer"
 import {graphql, Link, navigate} from 'gatsby'
 import atob from "atob"
+import btoa from "btoa"
 import {
   Jumbotron,
   Row,
@@ -69,11 +70,15 @@ const BlogPage = ({data}) => {
         "fields": "namespace,key,value"
       }
       const reqData = jsonToQueryString(getData)
-      const apiURL = `${reuestURL}/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json${reqData}`
-      console.log(index, apiURL)
+      const apiURL = `//${shopURL}/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json${reqData}`
+      console.log(index, apiURL, 'Basic ' + btoa(apikey + ':' + password))
       const fetchData = (async (URL) => {
         return await fetch(URL, {
-          method: 'GET'
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            "Authorization": 'Basic ' + btoa(apikey + ':' + password)
+          },
         }).then((response) => {
           if (response.status === 200) {
             response.json().then((responseJson) => {

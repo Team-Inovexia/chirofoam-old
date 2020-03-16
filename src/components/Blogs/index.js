@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {useStaticQuery, graphql, Link, navigate} from 'gatsby'
 import {Col, Pagination, PaginationItem, UncontrolledPopover, PopoverBody} from 'reactstrap'
 import atob from "atob"
+import btoa from "btoa"
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -94,10 +95,15 @@ const Blogs = ({id}) => {
         "fields": "namespace,key,value"
       }
       const reqData = jsonToQueryString(getData)
-      const apiURL = `${reuestURL}/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json${reqData}`
+      const apiURL = `//${shopURL}/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json${reqData}`
+      console.log(index, apiURL, 'Basic ' + btoa(apikey + ':' + password))
       const fetchData = (async (URL) => {
         return await fetch(URL, {
-          method: 'GET'
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            "Authorization": 'Basic ' + btoa(apikey + ':' + password)
+          },
         }).then((response) => {
           if (response.status === 200) {
             response.json().then((responseJson) => {
