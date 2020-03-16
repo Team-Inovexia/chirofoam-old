@@ -3,6 +3,7 @@ import {useStaticQuery, graphql, Link, navigate} from 'gatsby'
 import {Col, Pagination, PaginationItem, UncontrolledPopover, PopoverBody} from 'reactstrap'
 import atob from "atob"
 import axios from "axios"
+import $ from "jquery"
 import btoa from "btoa"
 import {
   FacebookShareButton,
@@ -107,6 +108,7 @@ const Blogs = ({id}) => {
             'Content-Type': 'application/json',
             'Cache-Control': 'no-cache',
             'Host': 'chirofoam.myshopify.com',
+            'Referer': '//chirofoam.myshopify.com',
             'X-Shopify-Access-Token': password
           }
         })

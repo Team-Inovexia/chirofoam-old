@@ -4,6 +4,7 @@ import Footer from "~/components/footer"
 import {graphql, Link, navigate} from 'gatsby'
 import atob from "atob"
 import axios from "axios"
+import $ from "jquery"
 import btoa from "btoa"
 import {
   Jumbotron,

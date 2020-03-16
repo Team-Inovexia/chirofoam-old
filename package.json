@@ -28,6 +28,7 @@
     "gatsby-source-shopify": "^3.0.48",
     "gatsby-transformer-sharp": "^2.3.14",
     "js-yaml": "^3.13.1",
+    "jquery": "^3.4.1",
     "lodash": "^4.17.15",
     "prop-types": "^15.7.2",
     "querystringify": "^2.0.0",
