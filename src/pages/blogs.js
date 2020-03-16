@@ -15,8 +15,8 @@ export default (props) => {
 		<Header />
 		<section className="blue-bg charity">
 			<Jumbotron className="mb-0 text-center text-white bg-transparent space-1 w-100 m-auto">
-				<h2 className="font-weight-bold erbaum-bold text-uppercase pt-md-5 space-2 pt-sm-1"><ScrollAnimation animateIn="fadeInUp">Chirofoam™ Memory Foam Mattresses</ScrollAnimation></h2>
-				<p className="space-4 proxima-r text-white m-auto text-center px-0 px-sm-5 px-lg-5 px-xl-5 pt-2 pt-sm-4" style={{width:'90%',fontSize:'26px'}}><ScrollAnimation animateIn="fadeInUp">Sleep Education and Chirofoam™ News</ScrollAnimation></p>
+				<ScrollAnimation animateIn="fadeInUp"><h2 className="font-weight-bold erbaum-bold text-uppercase pt-md-5 space-2 pt-sm-1">Chirofoam™ Memory Foam Mattresses</h2></ScrollAnimation>
+				<ScrollAnimation animateIn="fadeInUp"><p className="space-4 proxima-r text-white m-auto text-center px-0 px-sm-5 px-lg-5 px-xl-5 pt-2 pt-sm-4" style={{width:'90%',fontSize:'26px'}}>Sleep Education and Chirofoam™ News</p></ScrollAnimation>
 			</Jumbotron>
 		</section>
 		<section className="mb-0 py-5 position-relative">
@@ -42,13 +42,13 @@ export default (props) => {
 					<p className="cta mt-0 pt-sm-4 pt-lg-4 pt-xl-4 w-100 text-center mt-4 mt-sm-0">
 						<a href="/reviews/" className="btn-cta color-primary erbaum-bold space-1">SEE REVIEWS</a>
 					</p>
-					<p className="filson-pro-reg color-secondary pt-3 w-75 m-auto text-center space-1" style={{fontSize:'20px'}}>Chirofoam™ Memory Foam Mattresses are proudly developed and manufactured in Toronto, ON, Canada.</p> 
+					<p className="filson-pro-reg color-secondary pt-3 w-75 m-auto text-center space-1" style={{fontSize:'20px'}}>Chirofoam™ Memory Foam Mattresses are proudly developed and manufactured in Toronto, ON, Canada.</p>
 				</Row>
 			</div>
 		</section>
 </ScrollAnimation>
 		<Footer />
-	  
+
 
 
 	</>
