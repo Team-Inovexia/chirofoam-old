@@ -60,6 +60,7 @@ const Blogs = ({id}) => {
   const apikey = "1bd559b0e2f7a65ee790852e9d01fa1d"
   const password = "8e8aac347316f0b5b7e7b5897188a365"
   const shopURL = "chirofoam.myshopify.com"
+  const reuestURL = `//${apikey}:${password}@${shopURL}`
   const pageInfo = allShopifyArticle.pageInfo
   const currentPage = pageInfo.currentPage
   const previousPage = (currentPage === 1)
