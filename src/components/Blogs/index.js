@@ -3,7 +3,6 @@ import {useStaticQuery, graphql, Link, navigate} from 'gatsby'
 import {Col, Pagination, PaginationItem, UncontrolledPopover, PopoverBody} from 'reactstrap'
 import atob from "atob"
 import axios from "axios"
-import curlirize from 'axios-curlirize';
 import $ from "jquery"
 import btoa from "btoa"
 import {
@@ -17,7 +16,6 @@ import {
   TwitterIcon, FacebookShareCount
 } from "react-share"
 
-curlirize(axios)
 const Blogs = ({id}) => {
   const URL = typeof window !== 'undefined'
     ? window.location.origin
