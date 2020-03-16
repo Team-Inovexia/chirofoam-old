@@ -2,8 +2,6 @@ import React, {useState, useEffect} from 'react'
 import {useStaticQuery, graphql, Link, navigate} from 'gatsby'
 import {Col, Pagination, PaginationItem, UncontrolledPopover, PopoverBody} from 'reactstrap'
 import atob from "atob"
-import axios from "axios"
-import $ from "jquery"
 import btoa from "btoa"
 import {
   FacebookShareButton,
@@ -98,31 +96,23 @@ const Blogs = ({id}) => {
       }
       const reqData = jsonToQueryString(getData)
       const apiURL = `//${shopURL}/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json${reqData}`
-      console.log(typeof $.ajax, index, apiURL, reuestURL)
+      console.log(index, apiURL, 'Basic ' + btoa(apikey + ':' + password))
       const fetchData = (async (URL) => {
-        return await axios.get(URL,{
-          method: 'get',
-          crossDomain: true,
+        return await fetch(URL, {
+          method: 'GET',
           headers: {
-            'Access-Control-Allow-Origin': '*',
             'Content-Type': 'application/json',
-            'Cache-Control': 'no-cache',
-            'X-Host-Override': 'chirofoam.myshopify.com',
-            'Referer': '//chirofoam.myshopify.com',
-            'X-Shopify-Access-Token': password
+            "Authorization": 'Basic ' + btoa(apikey + ':' + password)
           }
-        })
-        .then(function (response) {
-          console.log(response)
+        }).then((response) => {
           if (response.status === 200) {
             response.json().then((responseJson) => {
               console.log(responseJson)
               //document.getElementById(`count-${index}`).innerHTML = responseJson.response.metafields.length
             })
           }
-        })
-        .catch(function (error) {
-          console.log(error)
+        }).catch((error) => {
+          console.error(error)
         })
       })(apiURL)
     }

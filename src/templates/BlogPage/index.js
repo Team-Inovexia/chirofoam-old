@@ -3,8 +3,6 @@ import Header from "~/components/header"
 import Footer from "~/components/footer"
 import {graphql, Link, navigate} from 'gatsby'
 import atob from "atob"
-import axios from "axios"
-import $ from "jquery"
 import btoa from "btoa"
 import {
   Jumbotron,
@@ -28,7 +26,7 @@ import {
   PinterestIcon,
   TwitterIcon
 } from "react-share"
-import ScrollAnimation from 'react-animate-on-scroll'
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const BlogPage = ({data}) => {
   const URL = typeof window !== 'undefined'
@@ -73,30 +71,23 @@ const BlogPage = ({data}) => {
       }
       const reqData = jsonToQueryString(getData)
       const apiURL = `//${shopURL}/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json${reqData}`
-      console.log(typeof $.ajax, index, apiURL, reuestURL)
+      console.log(index, apiURL)
       const fetchData = (async (URL) => {
-        return await axios.get(URL,{
-          method: 'get',
-          crossDomain: true,
+        return await fetch(URL, {
+          method: 'GET',
           headers: {
-            'Access-Control-Allow-Origin': '*',
             'Content-Type': 'application/json',
-            'Cache-Control': 'no-cache',
-            'X-Host-Override': 'chirofoam.myshopify.com',
-            'X-Shopify-Access-Token': password
-          }
-        })
-        .then(function (response) {
-          console.log(response)
+            "Authorization": 'Basic ' + btoa(apikey + ':' + password)
+          },
+        }).then((response) => {
           if (response.status === 200) {
             response.json().then((responseJson) => {
               console.log(responseJson)
               //document.getElementById(`count-${index}`).innerHTML = responseJson.response.metafields.length
             })
           }
-        })
-        .catch(function (error) {
-          console.log(error)
+        }).catch((error) => {
+          console.error(error)
         })
       })(apiURL)
     }
