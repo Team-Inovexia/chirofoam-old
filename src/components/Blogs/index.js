@@ -107,7 +107,7 @@ const Blogs = ({id}) => {
             'Access-Control-Allow-Origin': '*',
             'Content-Type': 'application/json',
             'Cache-Control': 'no-cache',
-            'Host': 'chirofoam.myshopify.com',
+            'X-Host-Override': 'chirofoam.myshopify.com',
             'Referer': '//chirofoam.myshopify.com',
             'X-Shopify-Access-Token': password
           }
