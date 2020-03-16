@@ -33,6 +33,10 @@ const BlogPage = ({data}) => {
     : ''
   const allShopifyArticle = data.allShopifyArticle;
   const token = "8688ae404288aacf2fd070b0bf36952a"
+  const apikey = "1bd559b0e2f7a65ee790852e9d01fa1d"
+  const password = "8e8aac347316f0b5b7e7b5897188a365"
+  const shopURL = "chirofoam.myshopify.com"
+  const reuestURL = `//${apikey}:${password}@${shopURL}/admin/api/2020-01/orders.json`
   const pageInfo = allShopifyArticle.pageInfo;
   const currentPage = pageInfo.currentPage;
   const previousPage = (currentPage === 1)
@@ -58,33 +62,33 @@ const BlogPage = ({data}) => {
     }).join('&')
   }
   const fetchLikeCount = (index, articleId, blogId) => {
-    console.log(index, articleId, blogId)
     if(pageLoaded){
-      const getData = {
-        "api": `/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields.json`,
-        "namespace": "postlike",
-        "value_type": "string",
-        "fields": "namespace,key,value"
-      }
-      const reqData = jsonToQueryString(getData)
-      const fetchData = (async (URL) => {
-        return await fetch(URL, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            "X-Shopify-Access-Token": token
-          }
-        }).then((response) => {
-          if (response.status === 200) {
-            response.json().then((responseJson) => {
-              console.log(responseJson)
-              document.getElementById(`count-${index}`).innerHTML = responseJson.response.metafields.length
-            })
-          }
-        }).catch((error) => {
-          console.error(error)
-        })
-      })(`//icbtc.com/development/shopify-api/${reqData}`)
+      console.log(index, articleId, blogId)
+      // const getData = {
+      //   "api": `/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields.json`,
+      //   "namespace": "postlike",
+      //   "value_type": "string",
+      //   "fields": "namespace,key,value"
+      // }
+      // const reqData = jsonToQueryString(getData)
+      // const fetchData = (async (URL) => {
+      //   return await fetch(URL, {
+      //     method: 'GET',
+      //     headers: {
+      //       'Content-Type': 'application/json',
+      //       "X-Shopify-Access-Token": token
+      //     }
+      //   }).then((response) => {
+      //     if (response.status === 200) {
+      //       response.json().then((responseJson) => {
+      //         console.log(responseJson)
+      //         document.getElementById(`count-${index}`).innerHTML = responseJson.response.metafields.length
+      //       })
+      //     }
+      //   }).catch((error) => {
+      //     console.error(error)
+      //   })
+      // })(`//icbtc.com/development/shopify-api/${reqData}`)
     }
   }
   const postLike = (event, index, articleId, blogId, Ip) => {

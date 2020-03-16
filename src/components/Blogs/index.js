@@ -83,33 +83,33 @@ const Blogs = ({id}) => {
     }).join('&')
   }
   const fetchLikeCount = (index, articleId, blogId) => {
-    console.log(index, articleId, blogId)
     if(pageLoaded){
-      const getData = {
-        "api": `/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields.json`,
-        "namespace": "postlike",
-        "value_type": "string",
-        "fields": "namespace,key,value"
-      }
-      const reqData = jsonToQueryString(getData)
-      const fetchData = (async (URL) => {
-        return await fetch(URL, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            "X-Shopify-Access-Token": token
-          }
-        }).then((response) => {
-          if (response.status === 200) {
-            response.json().then((responseJson) => {
-              console.log(responseJson)
-              document.getElementById(`count-${index}`).innerHTML = responseJson.response.metafields.length
-            })
-          }
-        }).catch((error) => {
-          console.error(error)
-        })
-      })(`//icbtc.com/development/shopify-api/${reqData}`)
+      console.log(index, articleId, blogId)
+      // const getData = {
+      //   "api": `/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields.json`,
+      //   "namespace": "postlike",
+      //   "value_type": "string",
+      //   "fields": "namespace,key,value"
+      // }
+      // const reqData = jsonToQueryString(getData)
+      // const fetchData = (async (URL) => {
+      //   return await fetch(URL, {
+      //     method: 'GET',
+      //     headers: {
+      //       'Content-Type': 'application/json',
+      //       "X-Shopify-Access-Token": token
+      //     }
+      //   }).then((response) => {
+      //     if (response.status === 200) {
+      //       response.json().then((responseJson) => {
+      //         console.log(responseJson)
+      //         document.getElementById(`count-${index}`).innerHTML = responseJson.response.metafields.length
+      //       })
+      //     }
+      //   }).catch((error) => {
+      //     console.error(error)
+      //   })
+      // })(`//icbtc.com/development/shopify-api/${reqData}`)
     }
   }
   const postLike = (event, index, articleId, blogId, Ip) => {
