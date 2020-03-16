@@ -74,7 +74,7 @@ const BlogPage = ({data}) => {
       const apiURL = `//${shopURL}/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json${reqData}`
       console.log(axios, index, apiURL, reuestURL)
       const fetchData = (async (URL) => {
-        return await axios.get(URL{
+        return await axios.get(URL,{
           method: 'get',
           headers: {
             'Content-Type': 'application/json',
