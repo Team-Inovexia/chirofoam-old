@@ -74,22 +74,28 @@ const BlogPage = ({data}) => {
       const apiURL = `//${shopURL}/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json${reqData}`
       console.log(axios, index, apiURL, reuestURL)
       const fetchData = (async (URL) => {
-        return await fetch(URL, {
-          method: 'GET',
+        return await axios.get(URL{
+          method: 'get',
           headers: {
             'Content-Type': 'application/json',
             "Authorization": 'Basic ' + btoa(apikey + ':' + password)
           },
-          credentials: "include"
-        }).then((response) => {
+          auth: {
+            username: apikey,
+            password: password
+          }
+        })
+        .then(function (response) {
+          console.log(response)
           if (response.status === 200) {
             response.json().then((responseJson) => {
               console.log(responseJson)
               //document.getElementById(`count-${index}`).innerHTML = responseJson.response.metafields.length
             })
           }
-        }).catch((error) => {
-          console.error(error)
+        })
+        .catch(function (error) {
+          console.log(error)
         })
       })(apiURL)
     }
