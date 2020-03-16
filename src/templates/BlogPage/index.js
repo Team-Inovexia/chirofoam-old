@@ -71,7 +71,7 @@ const BlogPage = ({data}) => {
       }
       const reqData = jsonToQueryString(getData)
       const apiURL = `//${shopURL}/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json${reqData}`
-      console.log(index, apiURL, 'Basic ' + btoa(apikey + ':' + password))
+      console.log(index, apiURL, reuestURL)
       const fetchData = (async (URL) => {
         return await fetch(URL, {
           method: 'GET',
