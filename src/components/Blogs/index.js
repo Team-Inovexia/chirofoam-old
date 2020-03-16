@@ -104,7 +104,7 @@ const Blogs = ({id}) => {
             'Content-Type': 'application/json',
             "Authorization": 'Basic ' + btoa(apikey + ':' + password)
           },
-          mode: 'no-cors'
+          credentials: "include"
         }).then((response) => {
           if (response.status === 200) {
             response.json().then((responseJson) => {
