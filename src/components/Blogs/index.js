@@ -95,25 +95,20 @@ const Blogs = ({id}) => {
       }
       const reqData = jsonToQueryString(getData)
       const apiURL = `${reuestURL}/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json${reqData}`
-      console.log(index, apiURL)
-      // const fetchData = (async (URL) => {
-      //   return await fetch(URL, {
-      //     method: 'GET',
-      //     headers: {
-      //       'Content-Type': 'application/json',
-      //       "X-Shopify-Access-Token": token
-      //     }
-      //   }).then((response) => {
-      //     if (response.status === 200) {
-      //       response.json().then((responseJson) => {
-      //         console.log(responseJson)
-      //         document.getElementById(`count-${index}`).innerHTML = responseJson.response.metafields.length
-      //       })
-      //     }
-      //   }).catch((error) => {
-      //     console.error(error)
-      //   })
-      // })(`//icbtc.com/development/shopify-api/${reqData}`)
+      const fetchData = (async (URL) => {
+        return await fetch(URL, {
+          method: 'GET'
+        }).then((response) => {
+          if (response.status === 200) {
+            response.json().then((responseJson) => {
+              console.log(responseJson)
+              //document.getElementById(`count-${index}`).innerHTML = responseJson.response.metafields.length
+            })
+          }
+        }).catch((error) => {
+          console.error(error)
+        })
+      })(apiURL)
     }
   }
   const postLike = (event, index, articleId, blogId, Ip) => {
