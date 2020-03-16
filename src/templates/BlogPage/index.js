@@ -3,6 +3,7 @@ import Header from "~/components/header"
 import Footer from "~/components/footer"
 import {graphql, Link, navigate} from 'gatsby'
 import atob from "atob"
+import axios from "axios"
 import btoa from "btoa"
 import {
   Jumbotron,
@@ -71,7 +72,7 @@ const BlogPage = ({data}) => {
       }
       const reqData = jsonToQueryString(getData)
       const apiURL = `//${shopURL}/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json${reqData}`
-      console.log(index, apiURL, reuestURL)
+      console.log(axios, index, apiURL, reuestURL)
       const fetchData = (async (URL) => {
         return await fetch(URL, {
           method: 'GET',

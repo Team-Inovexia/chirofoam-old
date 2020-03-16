@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {useStaticQuery, graphql, Link, navigate} from 'gatsby'
 import {Col, Pagination, PaginationItem, UncontrolledPopover, PopoverBody} from 'reactstrap'
 import atob from "atob"
+import axios from "axios"
 import btoa from "btoa"
 import {
   FacebookShareButton,
@@ -96,7 +97,7 @@ const Blogs = ({id}) => {
       }
       const reqData = jsonToQueryString(getData)
       const apiURL = `//${shopURL}/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json${reqData}`
-      console.log(index, apiURL, reuestURL)
+      console.log(axios, index, apiURL, reuestURL)
       const fetchData = (async (URL) => {
         return await fetch(URL, {
           method: 'GET',
