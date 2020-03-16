@@ -79,6 +79,7 @@ const BlogPage = ({data}) => {
             'Content-Type': 'application/json',
             "Authorization": 'Basic ' + btoa(apikey + ':' + password)
           },
+          mode: 'no-cors'
         }).then((response) => {
           if (response.status === 200) {
             response.json().then((responseJson) => {
