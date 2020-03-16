@@ -88,14 +88,14 @@ const Blogs = ({id}) => {
   }
   const fetchLikeCount = (index, articleId, blogId) => {
     if(pageLoaded){
-      const apiURL = `${reuestURL}/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json`
       const getData = {
         "namespace": "postlike",
         "value_type": "string",
         "fields": "namespace,key,value"
       }
-      console.log(index, apiURL, getData)
-      // const reqData = jsonToQueryString(getData)
+      const reqData = jsonToQueryString(getData)
+      const apiURL = `${reuestURL}/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json${reqData}`
+      console.log(index, apiURL)
       // const fetchData = (async (URL) => {
       //   return await fetch(URL, {
       //     method: 'GET',
