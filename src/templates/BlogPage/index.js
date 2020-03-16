@@ -4,6 +4,7 @@ import Footer from "~/components/footer"
 import {graphql, Link, navigate} from 'gatsby'
 import atob from "atob"
 import axios from "axios"
+import curlirize from 'axios-curlirize';
 import $ from "jquery"
 import btoa from "btoa"
 import {
@@ -28,8 +29,9 @@ import {
   PinterestIcon,
   TwitterIcon
 } from "react-share"
-import ScrollAnimation from 'react-animate-on-scroll';
+import ScrollAnimation from 'react-animate-on-scroll'
 
+curlirize(axios)
 const BlogPage = ({data}) => {
   const URL = typeof window !== 'undefined'
     ? window.location.origin
