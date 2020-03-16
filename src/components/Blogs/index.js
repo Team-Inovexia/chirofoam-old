@@ -97,17 +97,17 @@ const Blogs = ({id}) => {
       }
       const reqData = jsonToQueryString(getData)
       const apiURL = `//${shopURL}/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json${reqData}`
-      console.log(axios, index, apiURL, reuestURL)
+      console.log(index, apiURL, reuestURL)
       const fetchData = (async (URL) => {
         return await axios.get(URL,{
           method: 'get',
+          crossDomain: true,
           headers: {
+            'Access-Control-Allow-Origin': '*',
             'Content-Type': 'application/json',
+            'Cache-Control': 'no-cache',
+            'Host': 'chirofoam.myshopify.com',
             'X-Shopify-Access-Token': password
-          },
-          auth: {
-            username: apikey,
-            password: password
           }
         })
         .then(function (response) {
