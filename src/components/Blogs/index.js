@@ -91,7 +91,7 @@ const Blogs = ({id}) => {
     if(pageLoaded){
       console.log(index, articleId, blogId)
       const getData = {
-        "api": `/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields.json`,
+        "api": `/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json`,
         "namespace": "postlike",
         "value_type": "string",
         "fields": "namespace,key,value"
@@ -108,13 +108,13 @@ const Blogs = ({id}) => {
           if (response.status === 200) {
             response.json().then((responseJson) => {
               console.log(responseJson)
-              //document.getElementById(`count-${index}`).innerHTML = responseJson.response.metafields.length
+              document.getElementById(`count-${index}`).innerHTML = responseJson.count
             })
           }
         }).catch((error) => {
           console.error(error)
         })
-      })(`//icbtc.com/development/shopify-api/${reqData}`)
+      })(`/api-call${reqData}`)
     }
   }
   const postLike = (event, index, articleId, blogId, Ip) => {
