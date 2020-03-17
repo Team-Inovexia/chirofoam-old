@@ -4,7 +4,7 @@ import Footer from "../components/footer"
 import {Container, Row, Col, Media} from 'reactstrap';
 import {Link} from 'gatsby'
 import "../assets/css/bootstrap.min.css"
-import O_img1 from "../assets/img/home4.png"
+import O_img1 from "../assets/img/home4.jpg"
 import O_img4 from "../assets/img/home55.png"
 import O_img3 from "../assets/img/home6.png"
 import product1 from "../assets/img/product1.jpg"
@@ -92,7 +92,7 @@ export default (props) => {
 						    </div>
 					  </div>
 					</Col>
-					<Col sm="6" className="pl-lg-5 pl-0 pt-3 pt-sm-0 color-primary">	
+					<Col sm="6" className="pl-lg-5 pl-0 pt-3 pt-sm-0 color-primary">
 						<h3 className="erbaum-bold pb-3 color-primary">THE CHIROFOAM<sup style={{fontSize:'16px'}}>TM</sup> XF MATTRESS - EXTRA FIRM</h3>
 						<p className="filson-pro-reg space-1 col-12 col-sm-12 col-lg-7 px-0" style={{fontSize:'14px'}}>Introducing the new Chirofoam<sup>TM</sup> XF Memory Foam mattress. An extra firm mattress designed for maximum support. Made in Toronto, ON.</p>
 						<p className="filson-pro-reg space-1 col-12 col-sm-12 col-lg-7 px-0" style={{fontSize:'14px'}}>Upgrade your sleep today!</p>
