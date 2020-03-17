@@ -1,5 +1,5 @@
 const path = require(`path`)
-const http = require("https");
+const http = require("https")
 const bodyParser = require('body-parser')
 
 exports.createPages = ({ graphql, actions }) => {
@@ -27,7 +27,7 @@ exports.createPages = ({ graphql, actions }) => {
       }
     }
   `).then(result => {
-    const paginate = [...Array(Math.ceil(result.data.allShopifyArticle.totalCount/10))];
+    const paginate = [...Array(Math.ceil(result.data.allShopifyArticle.totalCount/10))]
     result.data.allShopifyProduct.edges.forEach(({ node }) => {
       createPage({
         path: `/product/${node.handle}/`,
@@ -67,7 +67,7 @@ exports.onCreateDevServer = ({ app }) => {
   const hostname = "chirofoam.myshopify.com"
   app.use(bodyParser.urlencoded({
     extended: false
-  }));
+  }))
   app.use(bodyParser.json())
   app.get('/api-call', (req, res) => {
     const Access_Token = req.headers['X-Shopify-Access-Token'.toLowerCase()]
@@ -86,17 +86,16 @@ exports.onCreateDevServer = ({ app }) => {
       }
     }
     const request = http.request(options, function(response) {
-      let chunks = [];
+      let chunks = []
       response.on("data", function(chunk) {
-        chunks.push(chunk);
-      });
+        chunks.push(chunk)
+      })
       response.on("end", function() {
-        let body = Buffer.concat(chunks);
-        //res.setHeader('Content-Type', 'application/json');
-        res.json(JSON.parse(body.toString()));
-      });
-    });
-    request.end();
+        let body = Buffer.concat(chunks)
+        res.json(JSON.parse(body.toString()))
+      })
+    })
+    request.end()
   })
   app.post('/api-call', (req, res) => {
     const Access_Token = req.headers['X-Shopify-Access-Token'.toLowerCase()]
@@ -112,18 +111,18 @@ exports.onCreateDevServer = ({ app }) => {
         "X-Shopify-Access-Token": Access_Token,
         "Content-Type": Content_Type
       }
-    };
+    }
     const request = http.request(options, function(response) {
-      let chunks = [];
+      let chunks = []
       response.on("data", function(chunk) {
-        chunks.push(chunk);
-      });
+        chunks.push(chunk)
+      })
       response.on("end", function() {
-        let body = Buffer.concat(chunks);
-        res.json(JSON.parse(body.toString()));
-      });
-    });
-    request.write(JSON.stringify(req.body.query));
-    request.end();
+        let body = Buffer.concat(chunks)
+        res.json(JSON.parse(body.toString()))
+      })
+    })
+    request.write(JSON.stringify(req.body.query))
+    request.end()
   })
 }
