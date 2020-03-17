@@ -13,6 +13,7 @@
     "atob": "^2.1.2",
     "axios": "^0.19.2",
     "btoa": "^1.2.1",
+    "body-parser": "^1.19.0",
     "gatsby": "^2.19.17",
     "gatsby-cli": "^2.10.7",
     "gatsby-image": "^2.2.29",

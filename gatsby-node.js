@@ -1,5 +1,6 @@
 const path = require(`path`)
 const http = require("https");
+const bodyParser = require('body-parser')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -63,6 +64,8 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 exports.onCreateDevServer = ({ app }) => {
+  app.use(bodyParser.urlencoded({ extended: false }));
+  app.use(bodyParser.json())
   app.get('/api-call', (req, res) => {
     const Access_Token = req.headers['X-Shopify-Access-Token'.toLowerCase()]
     const Content_Type = req.headers['content-type']
