@@ -138,7 +138,7 @@ const ArticlePage = ({data}) => {
           },
           body: JSON.stringify(data)
         }).then((response) => {
-          if (response.status === 201) {
+          if (response.status === 200) {
             response.json().then((responseJson) => {
               setResponseVisible(true)
               setResponseColor("success")
@@ -188,7 +188,7 @@ const ArticlePage = ({data}) => {
         },
         body: JSON.stringify(data)
       }).then((response) => {
-        if (response.status === 201) {
+        if (response.status === 200) {
           response.json().then((responseJson) => {
             fetchData(`/api-call${reqLikeData}`)
           })
