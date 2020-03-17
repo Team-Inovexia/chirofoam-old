@@ -208,7 +208,7 @@ const BlogPage = ({data}) => {
                     </div>
                     <div className="mb-0 pr-2 pr-sm-2 pr-lg-0 pr-xl-0" style={{
                         color: 'rgba(0,0,0,0.4)'
-                      }} onClick={(e) => postLike(e, index, parseInt(atob(shopifyId).split("/").pop()), parseInt(atob(blog.shopifyId).split("/").pop()), ip)}>
+                      }} role="button" onClick={(e) => postLike(e, index, parseInt(atob(shopifyId).split("/").pop()), parseInt(atob(blog.shopifyId).split("/").pop()), ip)} onKeyDown={(e) => postLike(e, index, parseInt(atob(shopifyId).split("/").pop()), parseInt(atob(blog.shopifyId).split("/").pop()), ip)}>
                       <i className="fa fa-heart"></i>
                       <span className="d-block" id={`count-${index}`}>0</span>
                     </div>

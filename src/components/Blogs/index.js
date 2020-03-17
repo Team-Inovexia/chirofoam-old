@@ -219,14 +219,12 @@ const Blogs = ({id}) => {
                 <i className="fa fa-envelope"></i>
                 <span className="d-block">{comments.length}</span>
               </div>
-              <button className="bg-transparent border-0 mb-0 pr-2 pr-sm-2 pr-lg-0 pr-xl-0" style={{
+              <div className="mb-0 pr-2 pr-sm-2 pr-lg-0 pr-xl-0" style={{
                   color: 'rgba(0,0,0,0.4)'
-                }} onClick={(e) => postLike(e, index, parseInt(atob(shopifyId).split("/").pop()), parseInt(atob(blog.shopifyId).split("/").pop()), ip)}
-                onKeyDown={(e) => postLike(e, index, parseInt(atob(shopifyId).split("/").pop()), parseInt(atob(blog.shopifyId).split("/").pop()), ip)}
-                >
+                }} role="button" onClick={(e) => postLike(e, index, parseInt(atob(shopifyId).split("/").pop()), parseInt(atob(blog.shopifyId).split("/").pop()), ip)} onKeyDown={(e) => postLike(e, index, parseInt(atob(shopifyId).split("/").pop()), parseInt(atob(blog.shopifyId).split("/").pop()), ip)}>
                 <i className="fa fa-heart"></i>
                 <span className="d-block" id={`count-${index}`}>0</span>
-              </button>
+              </div>
             </Col>
             <Col className="pl-2 pl-sm-2 pl-lg-4 pl-xl-4 col-11 blog-content">
               <p style={{
