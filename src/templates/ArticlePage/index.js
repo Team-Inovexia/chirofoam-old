@@ -35,7 +35,7 @@ const ArticlePage = ({data}) => {
   const articleId = parseInt(atob(article.shopifyId).split("/").pop())
   const blogId = parseInt(atob(article.blog.shopifyId).split("/").pop())
   const [ip, setIp] = useState("")
-  const token = "8688ae404288aacf2fd070b0bf36952a"
+  const token = "8e8aac347316f0b5b7e7b5897188a365"
   const jsonToQueryString = (json) => {
     return '?' + Object.keys(json).map(function(key) {
       return encodeURIComponent(key) + '=' + encodeURIComponent(json[key])
@@ -157,7 +157,7 @@ const ArticlePage = ({data}) => {
           console.error(error)
         })
       }
-      sendComment(`//icbtc.com/development/shopify-api/`)
+      sendComment(`/api-call`)
     } else {
       setResponseVisible(true)
       setResponseColor("warning")
@@ -190,14 +190,14 @@ const ArticlePage = ({data}) => {
       }).then((response) => {
         if (response.status === 200) {
           response.json().then((responseJson) => {
-            fetchData(`//icbtc.com/development/shopify-api/${reqLikeData}`)
+            fetchData(`/api-call${reqLikeData}`)
           })
         }
       }).catch((error) => {
         console.error(error)
       })
     }
-    sendLike(`//icbtc.com/development/shopify-api/`)
+    sendLike(`/api-call`)
   }
   const fetchData = async (URL) => {
     return await fetch(URL, {
@@ -231,8 +231,8 @@ const ArticlePage = ({data}) => {
           setTotalComments(responseJson.response.comments.length)
         }
       })
-    })(`//icbtc.com/development/shopify-api/${reqData}`)
-    fetchData(`//icbtc.com/development/shopify-api/${reqLikeData}`)
+    })(`/api-call${reqData}`)
+    fetchData(`/api-call${reqLikeData}`)
   }, [])
   return (<> <SEO title = {
     article.title
