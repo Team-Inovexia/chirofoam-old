@@ -110,7 +110,7 @@ const BlogPage = ({data}) => {
         },
         body: JSON.stringify(data)
       }).then((response) => {
-        if (response.status === 200) {
+        if (response.status === 201) {
           response.json().then((responseJson) => {
             fetchLikeCount(index, articleId, blogId)
             console.log(responseJson, index, articleId, blogId)
