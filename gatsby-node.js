@@ -91,8 +91,8 @@ exports.onCreateDevServer = ({ app }) => {
 
       response.on("end", function() {
         var body = Buffer.concat(chunks);
-        res.setHeader('Content-Type', 'application/json');
-        res.send(body.toString());
+        //res.setHeader('Content-Type', 'application/json');
+        res.json(body.toJSON());
       });
     });
     rqst.end();
@@ -100,6 +100,6 @@ exports.onCreateDevServer = ({ app }) => {
   app.post('/api-call', (req, res) => {
     const Access_Token = req.headers['X-Shopify-Access-Token'.toLowerCase()]
     const Content_Type = req.headers['content-type']
-    res.send(req.body);
+    res.json(req.body);
   })
 }

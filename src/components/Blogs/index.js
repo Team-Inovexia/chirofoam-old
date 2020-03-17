@@ -57,11 +57,7 @@ const Blogs = ({id}) => {
         }
       }
     `)
-  const token = "8688ae404288aacf2fd070b0bf36952a"
-  const apikey = "1bd559b0e2f7a65ee790852e9d01fa1d"
-  const password = "8e8aac347316f0b5b7e7b5897188a365"
-  const shopURL = "chirofoam.myshopify.com"
-  const reuestURL = `//${apikey}:${password}@${shopURL}`
+  const token = "8e8aac347316f0b5b7e7b5897188a365"
   const pageInfo = allShopifyArticle.pageInfo
   const currentPage = pageInfo.currentPage
   const previousPage = (currentPage === 1)
@@ -102,7 +98,7 @@ const Blogs = ({id}) => {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-            "X-Shopify-Access-Token": password
+            "X-Shopify-Access-Token": token
           }
         }).then((response) => {
           if (response.status === 200) {
@@ -141,14 +137,14 @@ const Blogs = ({id}) => {
       }).then((response) => {
         if (response.status === 200) {
           response.json().then((responseJson) => {
-            fetchLikeCount(index, articleId, blogId)
+            //fetchLikeCount(index, articleId, blogId)
             console.log(responseJson, index, articleId, blogId)
           })
         }
       }).catch((error) => {
         console.error(error)
       })
-    })(`//icbtc.com/development/shopify-api/`)
+    })(`/api-call`)
   }
   useEffect(() => {
     const getIp = (async () => {

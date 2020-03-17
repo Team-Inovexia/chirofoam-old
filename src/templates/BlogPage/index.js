@@ -33,11 +33,7 @@ const BlogPage = ({data}) => {
     ? window.location.origin
     : ''
   const allShopifyArticle = data.allShopifyArticle;
-  const token = "8688ae404288aacf2fd070b0bf36952a"
-  const apikey = "1bd559b0e2f7a65ee790852e9d01fa1d"
-  const password = "8e8aac347316f0b5b7e7b5897188a365"
-  const shopURL = "chirofoam.myshopify.com"
-  const reuestURL = `//${apikey}:${password}@${shopURL}`
+  const token = "8e8aac347316f0b5b7e7b5897188a365"
   const pageInfo = allShopifyArticle.pageInfo;
   const currentPage = pageInfo.currentPage;
   const previousPage = (currentPage === 1)
@@ -77,7 +73,7 @@ const BlogPage = ({data}) => {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-            "X-Shopify-Access-Token": password
+            "X-Shopify-Access-Token": token
           }
         }).then((response) => {
           if (response.status === 200) {
