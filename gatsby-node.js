@@ -63,7 +63,7 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 exports.onCreateDevServer = ({ app }) => {
-  app.get('/api-call', function(req, res) {
+  app.get('/api-call', (req, res) => {
     const Access_Token = req.headers['X-Shopify-Access-Token'.toLowerCase()]
     const Content_Type = req.headers['content-type']
     const apiURL = req.query.api
@@ -93,5 +93,10 @@ exports.onCreateDevServer = ({ app }) => {
       });
     });
     rqst.end();
+  })
+  app.post('/api-call', (req, res) => {
+    const Access_Token = req.headers['X-Shopify-Access-Token'.toLowerCase()]
+    const Content_Type = req.headers['content-type']
+    res.send(Access_Token);
   })
 }
