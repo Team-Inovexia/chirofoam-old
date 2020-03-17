@@ -92,8 +92,7 @@ exports.onCreateDevServer = ({ app }) => {
       })
       response.on("end", function() {
         let body = Buffer.concat(chunks)
-        response.statusCode
-        res.sendStatus(200).json(JSON.parse(body.toString()))
+        res.json(JSON.parse(body.toString()))
       })
     })
     request.end()
@@ -120,7 +119,7 @@ exports.onCreateDevServer = ({ app }) => {
       })
       response.on("end", function() {
         let body = Buffer.concat(chunks)
-        res.sendStatus(201).json(JSON.parse(body.toString()))
+        res.json(JSON.parse(body.toString()))
       })
     })
     request.write(JSON.stringify(req.body.query))
