@@ -119,7 +119,7 @@ const BlogPage = ({data}) => {
       }).catch((error) => {
         console.error(error)
       })
-    })(`//icbtc.com/development/shopify-api/`)
+    })(`/api-call`)
   }
   useEffect(() => {
     const getIp = (async () => {

@@ -137,7 +137,7 @@ const Blogs = ({id}) => {
       }).then((response) => {
         if (response.status === 200) {
           response.json().then((responseJson) => {
-            //fetchLikeCount(index, articleId, blogId)
+            fetchLikeCount(index, articleId, blogId)
             console.log(responseJson, index, articleId, blogId)
           })
         }
