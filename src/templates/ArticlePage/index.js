@@ -63,7 +63,7 @@ const ArticlePage = ({data}) => {
   }
   const reqData = jsonToQueryString(getData)
   const getLikeData = {
-    "api": `/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields.json`,
+    "api": `/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json`,
     "namespace": "postlike",
     "value_type": "string",
     "fields": "namespace,key,value"
@@ -209,7 +209,7 @@ const ArticlePage = ({data}) => {
     }).then((response) => {
       if (response.status === 200) {
         response.json().then((responseJson) => {
-          document.getElementById("post-like").innerHTML = responseJson.response.metafields.length
+          document.getElementById("post-like").innerHTML = responseJson.count
         })
       }
     }).catch((error) => {
