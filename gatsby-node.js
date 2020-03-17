@@ -63,28 +63,30 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 exports.onCreateDevServer = ({ app }) => {
-  app.get('/api-call', function (req, res) {
+  app.get('/api-call', function(req, res) {
     const Access_Token = req.headers['X-Shopify-Access-Token'.toLowerCase()]
     const Content_Type = req.headers['content-type']
-
-    var options = {
-      "method": "GET",
+    const apiURL = req.query.api
+    delete req.query.api
+    const queryString = '?' + Object.keys(req.query).map(key => key + '=' + req.query[key]).join('&')
+    const options = {
+      "method": req.method,
       "hostname": "chirofoam.myshopify.com",
       "port": null,
-      "path": "/admin/api/2020-01/blogs/49122443319/articles/387195502647/metafields/count.json?namespace=postlike&value_type=string&fields=namespace%2Ckey%2Cvalue",
+      "path": apiURL+queryString,
       "headers": {
         "X-Shopify-Access-Token": Access_Token,
-        "content-type": Content_Type
+        "Content-Type": Content_Type
       }
-    };
-    const rqst = http.request(options, function (response) {
+    }
+    const rqst = http.request(options, function(response) {
       var chunks = [];
 
-      response.on("data", function (chunk) {
+      response.on("data", function(chunk) {
         chunks.push(chunk);
       });
 
-      response.on("end", function () {
+      response.on("end", function() {
         var body = Buffer.concat(chunks);
         res.send(body.toString());
       });
