@@ -227,8 +227,8 @@ const ArticlePage = ({data}) => {
       })
       res.json().then((responseJson) => {
         if (res.status === 200) {
-          setComments(responseJson.response.comments)
-          setTotalComments(responseJson.response.comments.length)
+          setComments(responseJson.comments)
+          setTotalComments(responseJson.comments.length)
         }
       })
     })(`/api-call${reqData}`)
