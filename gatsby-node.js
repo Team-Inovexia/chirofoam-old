@@ -88,6 +88,7 @@ exports.onCreateDevServer = ({ app }) => {
 
       response.on("end", function() {
         var body = Buffer.concat(chunks);
+        res.setHeader('Content-Type', 'application/json');
         res.send(body.toString());
       });
     });
