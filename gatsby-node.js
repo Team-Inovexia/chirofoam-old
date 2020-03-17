@@ -103,7 +103,6 @@ exports.onCreateDevServer = ({ app }) => {
     const Content_Type = req.headers['content-type']
     const apiURL = req.body.api
     delete req.body.api
-    res.json(req.body);
     const options = {
       "method": req.method,
       "hostname": hostname,
