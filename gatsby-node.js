@@ -1,4 +1,5 @@
 const path = require(`path`)
+const fs = require('fs')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -59,5 +60,10 @@ exports.createPages = ({ graphql, actions }) => {
         },
       })
     })
+  })
+}
+exports.onCreateDevServer = ({ app }) => {
+  app.get('/api-call', function (req, res) {
+    res.send('api-call');
   })
 }
