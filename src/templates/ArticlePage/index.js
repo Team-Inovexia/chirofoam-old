@@ -226,6 +226,7 @@ const ArticlePage = ({data}) => {
         }
       })
       res.json().then((responseJson) => {
+        console.log(responseJson.status)
         if (responseJson.status === 200) {
           setComments(responseJson.response.comments)
           setTotalComments(responseJson.response.comments.length)
