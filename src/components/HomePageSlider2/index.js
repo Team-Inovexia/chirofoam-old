@@ -68,7 +68,7 @@ const slides = items.map((item, index) => {
                   <Row className="pt-3 no-gutters m-0 position-relative">
                     <Col className="align-middle col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
                       <div className="white-dots">
-                         <img src={run} alt="run" width="75%" className="mt-sm-3 pl-sm-5 ml-sm-5" usemap="#workmap"/>
+                         <img src={run} alt="run" width="75%" className="mt-sm-3 pl-sm-5 ml-sm-5" useMap="#workmap"/>
                       </div>
                     </Col>
                     <Col className="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">

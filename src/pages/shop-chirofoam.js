@@ -53,7 +53,7 @@ export default (props) => {
 							<img src={product1} alt="Product1" width="100%" />
 							<Link to="/product/the-original-chirofoam™-mattress-luxury-firm/"><h3 className="text-left text-sm-left text-lg-right text-xl-right color-primary erbaum-bold pl-0">THE ORIGINAL CHIROFOAM™ MATTRESS - LUXURY FIRM</h3></Link>
 							<p className="text-left text-sm-left text-lg-right text-xl-right color-primary proxima-eb space-1 pt-1 mb-0 text-1">
-								The Original Chirofoam Memory Foam Mattress is designed to increase muscle recovery to help keep you performing at your best. Made in Toronto, ON. 
+								The Original Chirofoam Memory Foam Mattress is designed to increase muscle recovery to help keep you performing at your best. Made in Toronto, ON.
 							</p><br/>
 							<p className="text-left text-sm-left text-lg-right color-primary proxima-eb space-1 mb-0 text-1">
 								Upgrade your sleep today!
@@ -72,7 +72,7 @@ export default (props) => {
 							<Link to="/product/the-original-chirofoam™-mattress-luxury-firm/" className="btn-cta color-primary erbaum-bold space-1">BUY NOW</Link>
 						</p>
 					</Col>
-					
+
 					<Col sm="12" className="col-lg-6 col-xl-6 pl-0 pl-sm-0 pl-lg-2 pl-xl-2 position-relative mt-sm-5 mt-lg-0 mt-xl-0">
 						<div className="pl-0 pl-sm-0 pl-lg-5 pl-xl-5 ml-0 ml-sm-0 ml-lg-4 ml-xl-4">
 							<img src={product2} alt="Product2" width="100%" />
@@ -106,7 +106,7 @@ export default (props) => {
                   <Row className="pt-3 no-gutters m-0 position-relative">
                     <Col className="align-middle col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
                     	<div className="white-dots">
-                     		 <img src={run} alt="run" width="75%" className="mt-sm-3 pl-sm-5 ml-sm-5" usemap="#workmap"/>
+                     		 <img src={run} alt="run" width="75%" className="mt-sm-3 pl-sm-5 ml-sm-5" useMap="#workmap"/>
                      	</div>
                     </Col>
                     <Col className="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
@@ -179,7 +179,7 @@ export default (props) => {
 			</Container>
 		</section>
 
-		
+
 
 		<Footer />
 	</>

@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react'
 import {useStaticQuery, graphql, Link, navigate} from 'gatsby'
 import {Col, Pagination, PaginationItem, UncontrolledPopover, PopoverBody} from 'reactstrap'
 import atob from "atob"
-import btoa from "btoa"
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -11,7 +10,7 @@ import {
   FacebookIcon,
   LinkedinIcon,
   PinterestIcon,
-  TwitterIcon, FacebookShareCount
+  TwitterIcon
 } from "react-share"
 
 const Blogs = ({id}) => {
@@ -93,7 +92,7 @@ const Blogs = ({id}) => {
         "fields": "namespace,key,value"
       }
       const reqData = jsonToQueryString(getData)
-      const fetchData = (async (URL) => {
+      const fetchData = async (URL) => {
         return await fetch(URL, {
           method: 'GET',
           headers: {
@@ -110,7 +109,8 @@ const Blogs = ({id}) => {
         }).catch((error) => {
           console.error(error)
         })
-      })(`/api-call${reqData}`)
+      }
+      fetchData(`/api-call${reqData}`)
     }
   }
   const postLike = (event, index, articleId, blogId, Ip) => {
@@ -125,7 +125,7 @@ const Blogs = ({id}) => {
         }
       }
     }
-    const sendLike = (async (URL) => {
+    const sendLike = async (URL) => {
       console.log(URL, data)
       return await fetch(URL, {
         method: 'POST',
@@ -144,15 +144,17 @@ const Blogs = ({id}) => {
       }).catch((error) => {
         console.error(error)
       })
-    })(`/api-call`)
+    }
+    sendLike(`/api-call`)
   }
   useEffect(() => {
-    const getIp = (async () => {
+    const getIp = async () => {
       return await fetch(`//api.ipify.org/?format=json`, {method: 'GET'}).then(results => results.json()).then((data) => {
         setIp(data.ip)
         setPageLoaded(true)
       })
-    })()
+    }
+    getIp()
   }, [])
   return (<Col sm="8" className="align-middle">
     {
