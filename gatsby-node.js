@@ -1,5 +1,5 @@
 const path = require(`path`)
-const fs = require('fs')
+const http = require("https");
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -65,5 +65,29 @@ exports.createPages = ({ graphql, actions }) => {
 exports.onCreateDevServer = ({ app }) => {
   app.get('/api-call', function (req, res) {
     res.send('api-call');
+    var options = {
+      "method": "GET",
+      "hostname": "chirofoam.myshopify.com",
+      "port": null,
+      "path": "/admin/api/2020-01/blogs/49122443319/articles/387195502647/metafields/count.json?namespace=postlike&value_type=string&fields=namespace%2Ckey%2Cvalue",
+      "headers": {
+        "authorization": "Basic MWJkNTU5YjBlMmY3YTY1ZWU3OTA4NTJlOWQwMWZhMWQ6OGU4YWFjMzQ3MzE2ZjBiNWI3ZTdiNTg5NzE4OGEzNjU=",
+        "cache-control": "no-cache"
+      }
+    };
+    const req = http.request(options, function (res) {
+      var chunks = [];
+
+      res.on("data", function (chunk) {
+        chunks.push(chunk);
+      });
+
+      res.on("end", function () {
+        var body = Buffer.concat(chunks);
+        console.log(body.toString());
+      });
+    });
+
+    req.end();
   })
 }
