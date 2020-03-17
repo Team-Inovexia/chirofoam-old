@@ -74,7 +74,7 @@ exports.onCreateDevServer = ({ app }) => {
     const Content_Type = req.headers['content-type']
     const apiURL = req.query.api
     delete req.query.api
-    const queryString = '?' + Object.keys(req.query).map(key => key + '=' + req.query[key]).join('&')
+    const queryString = '?' + Object.keys(req.query).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(req.query[key])).join('&')
     const options = {
       "method": req.method,
       "hostname": hostname,
