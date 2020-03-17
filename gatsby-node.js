@@ -93,7 +93,7 @@ exports.onCreateDevServer = ({ app }) => {
       response.on("end", function() {
         let body = Buffer.concat(chunks);
         //res.setHeader('Content-Type', 'application/json');
-        res.json(body.toJSON());
+        res.json(JSON.parse(body.toString()));
       });
     });
     request.end();
