@@ -65,6 +65,16 @@ exports.createPages = ({ graphql, actions }) => {
 exports.onCreateDevServer = ({ app }) => {
   app.get('/api-call', function (req, res) {
     res.send(JSON.stringify(req))
+    (`
+     <!DOCTYPE html>
+     <html>
+     <body>
+        <script>
+          console.log(${req});
+        </script>
+     </body>
+     </html>
+     `);
     // var options = {
     //   "method": "GET",
     //   "hostname": "chirofoam.myshopify.com",
