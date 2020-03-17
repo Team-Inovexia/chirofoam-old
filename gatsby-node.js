@@ -97,6 +97,6 @@ exports.onCreateDevServer = ({ app }) => {
   app.post('/api-call', (req, res) => {
     const Access_Token = req.headers['X-Shopify-Access-Token'.toLowerCase()]
     const Content_Type = req.headers['content-type']
-    res.send(Access_Token);
+    res.send(req.body);
   })
 }
