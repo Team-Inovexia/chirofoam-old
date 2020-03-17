@@ -64,7 +64,10 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 exports.onCreateDevServer = ({ app }) => {
-  app.use(bodyParser.urlencoded({ extended: false }));
+  const hostname = "chirofoam.myshopify.com"
+  app.use(bodyParser.urlencoded({
+    extended: false
+  }));
   app.use(bodyParser.json())
   app.get('/api-call', (req, res) => {
     const Access_Token = req.headers['X-Shopify-Access-Token'.toLowerCase()]
@@ -74,32 +77,54 @@ exports.onCreateDevServer = ({ app }) => {
     const queryString = '?' + Object.keys(req.query).map(key => key + '=' + req.query[key]).join('&')
     const options = {
       "method": req.method,
-      "hostname": "chirofoam.myshopify.com",
+      "hostname": hostname,
       "port": null,
-      "path": apiURL+queryString,
+      "path": apiURL + queryString,
       "headers": {
         "X-Shopify-Access-Token": Access_Token,
         "Content-Type": Content_Type
       }
     }
-    const rqst = http.request(options, function(response) {
-      var chunks = [];
-
+    const request = http.request(options, function(response) {
+      let chunks = [];
       response.on("data", function(chunk) {
         chunks.push(chunk);
       });
-
       response.on("end", function() {
-        var body = Buffer.concat(chunks);
+        let body = Buffer.concat(chunks);
         //res.setHeader('Content-Type', 'application/json');
         res.json(body.toJSON());
       });
     });
-    rqst.end();
+    request.end();
   })
   app.post('/api-call', (req, res) => {
     const Access_Token = req.headers['X-Shopify-Access-Token'.toLowerCase()]
     const Content_Type = req.headers['content-type']
+    const apiURL = req.body.api
+    delete req.body.api
     res.json(req.body);
+    const options = {
+      "method": req.method,
+      "hostname": hostname,
+      "port": null,
+      "path": apiURL,
+      "headers": {
+        "X-Shopify-Access-Token": Access_Token,
+        "Content-Type": Content_Type
+      }
+    };
+    const request = http.request(options, function(response) {
+      let chunks = [];
+      response.on("data", function(chunk) {
+        chunks.push(chunk);
+      });
+      response.on("end", function() {
+        let body = Buffer.concat(chunks);
+        res.json(body.toJSON());
+      });
+    });
+    request.write(JSON.stringify(req.body.query));
+    request.end();
   })
 }
