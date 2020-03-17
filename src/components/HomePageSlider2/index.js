@@ -76,7 +76,7 @@ const slides = items.map((item, index) => {
                         <h3 className="approved-title text-white erbaum-bold lead-text lead-sm-text lead-md-text lead-lg-text lead-xl-text">CHIROPRACTOR APPROVED</h3>
                         <p className="proxima-b space-1 p-0 pt-sm-1 text-1">Chirofoam<sup style={{fontSize:'8px'}}>TM</sup> mattresses are designed by Chiropractors to improve posture, and provide incredible pressure relief. Your back will thank you.</p>
                         <p className="cta mt-3 mt-sm-0 mt-lg-0 mt-xl-0 pt-sm-0 pt-lg-0 pt-xl-0 mb-sm-2">
-                          <Link to="#" className="btn-cta text-white erbaum-bold space-1">CALL TO ACTION </Link>
+                          <button className="btn-cta bg-transparent text-white erbaum-bold space-1 border-0">CALL TO ACTION </button>
                         </p>
                       </div>
 
