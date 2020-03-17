@@ -89,20 +89,20 @@ const Blogs = ({id}) => {
   }
   const fetchLikeCount = (index, articleId, blogId) => {
     if(pageLoaded){
+      console.log(index, articleId, blogId)
       const getData = {
+        "api": `/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields.json`,
         "namespace": "postlike",
         "value_type": "string",
         "fields": "namespace,key,value"
       }
       const reqData = jsonToQueryString(getData)
-      const apiURL = `//${shopURL}/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json${reqData}`
-      console.log(index, apiURL, 'Basic ' + btoa(apikey + ':' + password))
       const fetchData = (async (URL) => {
         return await fetch(URL, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-            "Authorization": 'Basic ' + btoa(apikey + ':' + password)
+            "X-Shopify-Access-Token": password
           }
         }).then((response) => {
           if (response.status === 200) {
@@ -114,7 +114,7 @@ const Blogs = ({id}) => {
         }).catch((error) => {
           console.error(error)
         })
-      })(apiURL)
+      })(`//icbtc.com/development/shopify-api/${reqData}`)
     }
   }
   const postLike = (event, index, articleId, blogId, Ip) => {
