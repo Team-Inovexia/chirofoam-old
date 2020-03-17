@@ -64,39 +64,31 @@ exports.createPages = ({ graphql, actions }) => {
 }
 exports.onCreateDevServer = ({ app }) => {
   app.get('/api-call', function (req, res) {
-    res.send(JSON.stringify(req))
-    (`
-     <!DOCTYPE html>
-     <html>
-     <body>
-        <script>
-          console.log(${req});
-        </script>
-     </body>
-     </html>
-     `);
-    // var options = {
-    //   "method": "GET",
-    //   "hostname": "chirofoam.myshopify.com",
-    //   "port": null,
-    //   "path": "/admin/api/2020-01/blogs/49122443319/articles/387195502647/metafields/count.json?namespace=postlike&value_type=string&fields=namespace%2Ckey%2Cvalue",
-    //   "headers": {
-    //     "authorization": "Basic MWJkNTU5YjBlMmY3YTY1ZWU3OTA4NTJlOWQwMWZhMWQ6OGU4YWFjMzQ3MzE2ZjBiNWI3ZTdiNTg5NzE4OGEzNjU=",
-    //     "cache-control": "no-cache"
-    //   }
-    // };
-    // const rqst = http.request(options, function (response) {
-    //   var chunks = [];
-    //
-    //   response.on("data", function (chunk) {
-    //     chunks.push(chunk);
-    //   });
-    //
-    //   response.on("end", function () {
-    //     var body = Buffer.concat(chunks);
-    //     res.send(body.toString());
-    //   });
-    // });
-    // rqst.end();
+    const Access_Token = req.headers['X-Shopify-Access-Token'.toLowerCase()]
+    const Content_Type = req.headers['content-type']
+
+    var options = {
+      "method": "GET",
+      "hostname": "chirofoam.myshopify.com",
+      "port": null,
+      "path": "/admin/api/2020-01/blogs/49122443319/articles/387195502647/metafields/count.json?namespace=postlike&value_type=string&fields=namespace%2Ckey%2Cvalue",
+      "headers": {
+        "X-Shopify-Access-Token": Access_Token,
+        "content-type": Content_Type
+      }
+    };
+    const rqst = http.request(options, function (response) {
+      var chunks = [];
+
+      response.on("data", function (chunk) {
+        chunks.push(chunk);
+      });
+
+      response.on("end", function () {
+        var body = Buffer.concat(chunks);
+        res.send(body.toString());
+      });
+    });
+    rqst.end();
   })
 }
