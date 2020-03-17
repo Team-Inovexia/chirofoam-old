@@ -75,7 +75,7 @@ exports.onCreateDevServer = ({ app }) => {
         "cache-control": "no-cache"
       }
     };
-    const req = http.request(options, function (res) {
+    const rqst = http.request(options, function (res) {
       var chunks = [];
 
       res.on("data", function (chunk) {
@@ -87,7 +87,6 @@ exports.onCreateDevServer = ({ app }) => {
         console.log(body.toString());
       });
     });
-
-    req.end();
+    rqst.end();
   })
 }
