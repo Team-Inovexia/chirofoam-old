@@ -74,16 +74,15 @@ exports.onCreateDevServer = ({ app }) => {
         "cache-control": "no-cache"
       }
     };
-    const rqst = http.request(options, function (res) {
+    const rqst = http.request(options, function (response) {
       var chunks = [];
 
-      res.on("data", function (chunk) {
+      response.on("data", function (chunk) {
         chunks.push(chunk);
       });
 
-      res.on("end", function () {
+      response.on("end", function () {
         var body = Buffer.concat(chunks);
-        console.log(body.toString());
         res.send(body.toString());
       });
     });
