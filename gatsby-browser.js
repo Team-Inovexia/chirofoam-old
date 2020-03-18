@@ -3,9 +3,23 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
-
-// You can delete this file if you're not using it
-import "./src/assets/css/custom.css"
-import "./src/assets/css/responsive.css"
-import "./src/assets/css/font-awesome.min.css"
-import "./src/fonts//fonts.css"
+const fs = require("fs") // Or `import fs from "fs";` with ESM
+const minified = [
+  "./src/assets/css/custom.min.css",
+  "./src/assets/css/responsive.min.css",
+  "./src/assets/css/font-awesome.min.css",
+  "./src/fonts//fonts.min.css"
+]
+const beautified = [
+  "./src/assets/css/custom.css",
+  "./src/assets/css/responsive.css",
+  "./src/assets/css/font-awesome.css",
+  "./src/fonts//fonts.css"
+]
+minified.forEach((cssFile, i) => {
+  if (fs.existsSync(cssFile)) {
+    import minified[i]
+  } else {
+    import beautified[i]
+  }
+})

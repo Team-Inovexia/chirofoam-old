@@ -202,6 +202,7 @@ p.cta.erbaum.position-absolute {
 .home-banner {
 	background-image: url('../img/banner.jpg');
 	height:700px;
+  background-color: #151e3f;
 }
 
 .banner-home .leads {
