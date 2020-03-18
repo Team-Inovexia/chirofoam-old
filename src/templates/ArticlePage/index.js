@@ -41,11 +41,11 @@ const ArticlePage = ({data}) => {
       return encodeURIComponent(key) + '=' + encodeURIComponent(json[key])
     }).join('&')
   }
-  const getIp = (async () => {
+  const getIp = async () => {
     return await fetch(`//api.ipify.org/?format=json`, {method: 'GET'}).then(results => results.json()).then((data) => {
       setIp(data.ip)
     })
-  })()
+  }
   const getData = {
     "api": "/admin/api/2020-01/comments.json",
     "blog_id": blogId,
@@ -217,7 +217,8 @@ const ArticlePage = ({data}) => {
     })
   }
   useEffect(() => {
-    const fetchComments = (async (URL) => {
+    getIp()
+    const fetchComments = async (URL) => {
       const res = await fetch(URL, {
         method: 'GET',
         headers: {
@@ -231,9 +232,10 @@ const ArticlePage = ({data}) => {
           setTotalComments(responseJson.comments.length)
         }
       })
-    })(`/api-call${reqData}`)
+    }
+    fetchComments(`/api-call${reqData}`)
     fetchData(`/api-call${reqLikeData}`)
-  }, [])
+  }, [reqData, reqLikeData])
   return (<> <SEO title = {
     article.title
   }

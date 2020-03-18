@@ -1,14 +1,11 @@
 import React from 'react';
 import Banner from "../components/banner"
 import Footer from "../components/footer"
-import {Container, Row, Col, Media} from 'reactstrap';
+import {Container, Row, Col} from 'reactstrap';
 import SEO from '~/components/seo'
-import mattress1 from "../assets/img/mattress1.jpg"
 import active from "../assets/img/activelife.jpg"
 import product1 from "../assets/img/product1.jpg"
 import product2 from "../assets/img/product2.jpg"
-import blog1 from "../assets/img/blog1.jpg"
-import result from "../assets/img/results.jpg"
 import circle1 from "../assets/img/circle1.png"
 import circle2 from "../assets/img/circle2.png"
 import circle3 from "../assets/img/circle3.png"

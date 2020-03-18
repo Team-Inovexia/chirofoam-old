@@ -2,12 +2,11 @@ import React, { useState } from 'react'
 import { graphql, Link } from 'gatsby'
 import Header from "~/components/header"
 import Footer from "~/components/footer"
-import {Container, Row, Col, Media, Carousel, CarouselItem, CarouselControl, Modal} from 'reactstrap';
+import {Container, Row, Col, Media, Carousel, CarouselItem, CarouselControl, Modal} from 'reactstrap'
 import SEO from '~/components/seo'
 import ProductForm from '~/components/ProductForm'
 import {ProductDescription} from './styles'
 import icon1 from "~/assets/img/ic1.png"
-import product1 from "~/assets/img/product1.jpg"
 import icon2 from "~/assets/img/ic2.png"
 import icon3 from "~/assets/img/ic3.png"
 import icon4 from "~/assets/img/ic4.png"

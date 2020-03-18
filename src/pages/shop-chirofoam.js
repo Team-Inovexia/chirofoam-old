@@ -3,15 +3,13 @@ import { Link } from "gatsby"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import Banner from "../components/banner-shop-chirofoam"
-import {Container, Row, Col, Media} from 'reactstrap';
-import CountUp from 'react-countup';
+import {Container, Row, Col, Media} from 'reactstrap'
 import SEO from '~/components/seo'
 import mattress1 from "../assets/img/mattress1.jpg"
 import run from "../assets/img/only-man.png"
-//import Products from '~/components/Products'
 import product1 from "../assets/img/product1.jpg"
 import product2 from "../assets/img/product2.jpg"
-import ScrollAnimation from 'react-animate-on-scroll';
+import ScrollAnimation from 'react-animate-on-scroll'
 
 
 export default (props) => {

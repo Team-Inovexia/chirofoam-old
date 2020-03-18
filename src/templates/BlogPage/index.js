@@ -3,7 +3,6 @@ import Header from "~/components/header"
 import Footer from "~/components/footer"
 import {graphql, Link, navigate} from 'gatsby'
 import atob from "atob"
-import btoa from "btoa"
 import {
   Jumbotron,
   Row,
@@ -68,7 +67,7 @@ const BlogPage = ({data}) => {
         "fields": "namespace,key,value"
       }
       const reqData = jsonToQueryString(getData)
-      const fetchData = (async (URL) => {
+      const fetchData = async (URL) => {
         return await fetch(URL, {
           method: 'GET',
           headers: {
@@ -85,7 +84,8 @@ const BlogPage = ({data}) => {
         }).catch((error) => {
           console.error(error)
         })
-      })(`/api-call${reqData}`)
+      }
+      fetchData(`/api-call${reqData}`)
     }
   }
   const postLike = (event, index, articleId, blogId, Ip) => {
@@ -100,7 +100,7 @@ const BlogPage = ({data}) => {
         }
       }
     }
-    const sendLike = (async (URL) => {
+    const sendLike = async (URL) => {
       console.log(URL, data)
       return await fetch(URL, {
         method: 'POST',
@@ -119,15 +119,17 @@ const BlogPage = ({data}) => {
       }).catch((error) => {
         console.error(error)
       })
-    })(`/api-call`)
+    }
+    sendLike(`/api-call`)
   }
   useEffect(() => {
-    const getIp = (async () => {
+    const getIp = async () => {
       return await fetch(`//api.ipify.org/?format=json`, {method: 'GET'}).then(results => results.json()).then((data) => {
         setIp(data.ip)
         setPageLoaded(true)
       })
-    })()
+    }
+    getIp()
   }, [])
   return (<> <SEO title="Chirofoam™ Memory Foam Mattresses" description="Sleep Education and Chirofoam™ News" /> <Header/>
   <section className="blue-bg charity">
