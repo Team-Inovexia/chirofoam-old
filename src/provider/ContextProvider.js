@@ -5,7 +5,7 @@ import Context from '~/context/StoreContext'
 
 const client = Client.buildClient({
   storefrontAccessToken:'4d52a01cc9f9459adc48214472d0156a',
-  domain:'chirofoam.myshopify.com',
+  domain:'chirofoam-dev.myshopify.com',
 })
 
 const ContextProvider = ({ children }) => {

@@ -1,11 +1,5 @@
 (function() {
   function asyncLoad() {
-    var script_tag = document.createElement('script');
-    script_tag.type = 'text/javascript';
-    script_tag.text = "var Shopify = Shopify || {};";
-    script_tag.text += 'Shopify.shop = "chirofoam.myshopify.com";';
-    var x = document.getElementsByTagName('script')[0];
-    x.parentNode.insertBefore(script_tag, x);
     var urls = ["//www.google.com/recaptcha/api.js?render=explicit"];
     for (var i = 0; i < urls.length; i++) {
       var s = document.createElement('script');

@@ -106,7 +106,7 @@ export default(props) => {
           <form action="#" method="post" className="d-none" id="contact_form_custom" encType="multipart/form-data" onSubmit={e => submitForm(e)}>
             <div className="modal-body py-0">
               <div className="form-row">
-                <input type="hidden" name="domain" value="chirofoam.myshopify.com"/>
+                <input type="hidden" name="domain" value="chirofoam-dev.myshopify.com"/>
                 <input type="hidden" name="mail_to" value="asifaziz01@gmail.com"/>
                 <div className="col-6 form-group">
                   <input type="text" className="form-control required error" name="name" id="name" required={true} placeholder="Your Name*"/>

@@ -64,7 +64,7 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 exports.onCreateDevServer = ({ app }) => {
-  const hostname = "chirofoam.myshopify.com"
+  const hostname = "chirofoam-dev.myshopify.com"
   app.use(bodyParser.urlencoded({
     extended: false
   }))

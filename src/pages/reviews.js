@@ -23,7 +23,7 @@ import "~/assets/js/custom.js"
 import ScrollAnimation from 'react-animate-on-scroll'
 
 const Reviews = (props) => {
-  const shopName = "chirofoam.myshopify.com"
+  const shopName = "chirofoam-dev.myshopify.com"
   const [shopID, setShopID] = useState('')
   const [productID, setProductID] = useState('')
   const [productHandle, setProductHandle] = useState('')
