@@ -18,9 +18,9 @@ const beautified = [
 ]
 minified.forEach((cssFile, i) => {
   if (fs.existsSync(cssFile)) {
-    import cssFile
+    import cssFile;
   } else {
-    import beautified[i]
+    import beautified[i];
   }
 })
 // You can delete this file if you're not using it
