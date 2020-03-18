@@ -50,9 +50,11 @@ const HomePageSlider2 = (props) => {
     setActiveIndex(nextIndex);
   }
   const slides = items.map((item, index) => {
+    let slide = null
+    console.log(index)
     switch (index) {
       case 0:
-        return (<CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} key={index}>
+        slide = <CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} key={index}>
           <section className="py-4 pt-sm-4 pb-sm-4 approved bg-image">
             <Container className="">
               <Row className="pt-3 no-gutters m-0 position-relative">
@@ -122,10 +124,10 @@ const HomePageSlider2 = (props) => {
               </Row>
             </Container>
           </section>
-        </CarouselItem>)
+        </CarouselItem>;
         break;
       case 1:
-        return (<CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} style={{
+        slide = <CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} style={{
             maxHeight: '500px'
           }} key={index}>
           <section>
@@ -203,10 +205,10 @@ const HomePageSlider2 = (props) => {
               </Container>
             </div>
           </section>
-        </CarouselItem>)
+        </CarouselItem>;
         break;
       case 2:
-        return (<CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} style={{
+        slide = <CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} style={{
             maxHeight: '500px'
           }} key={index}>
           <section>
@@ -254,10 +256,11 @@ const HomePageSlider2 = (props) => {
               </Container>
             </div>
           </section>
-        </CarouselItem>)
+        </CarouselItem>;
         break;
       default:
     }
+    return({slide})
   });
 
   return (<Carousel activeIndex={activeIndex} next={next} previous={previous}>
