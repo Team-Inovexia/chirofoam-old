@@ -4,7 +4,7 @@ import Client from 'shopify-buy'
 import Context from '~/context/StoreContext'
 
 const client = Client.buildClient({
-  storefrontAccessToken:'4d52a01cc9f9459adc48214472d0156a',
+  storefrontAccessToken:'c48261d5691fcaf3fd0c8232ebd54a3a',
   domain:'chirofoam-dev.myshopify.com',
 })
 
