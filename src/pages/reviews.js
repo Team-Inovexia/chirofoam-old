@@ -193,7 +193,7 @@ const Reviews = (props) => {
             })
           }
         }).catch((error) => {
-          console.log(error)
+          console.error(error)
         })
       }
       sendReview(`//reviews.hulkapps.com/api/shop/${shopID}/reviews`)

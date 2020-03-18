@@ -59,7 +59,6 @@ const BlogPage = ({data}) => {
   }
   const fetchLikeCount = (index, articleId, blogId) => {
     if(pageLoaded){
-      console.log(index, articleId, blogId)
       const getData = {
         "api": `/admin/api/2020-01/blogs/${blogId}/articles/${articleId}/metafields/count.json`,
         "namespace": "postlike",
@@ -77,7 +76,6 @@ const BlogPage = ({data}) => {
         }).then((response) => {
           if (response.status === 200) {
             response.json().then((responseJson) => {
-              console.log(responseJson)
               document.getElementById(`count-${index}`).innerHTML = responseJson.count
             })
           }
@@ -101,7 +99,6 @@ const BlogPage = ({data}) => {
       }
     }
     const sendLike = async (URL) => {
-      console.log(URL, data)
       return await fetch(URL, {
         method: 'POST',
         headers: {
@@ -113,7 +110,6 @@ const BlogPage = ({data}) => {
         if (response.status === 200) {
           response.json().then((responseJson) => {
             fetchLikeCount(index, articleId, blogId)
-            console.log(responseJson, index, articleId, blogId)
           })
         }
       }).catch((error) => {

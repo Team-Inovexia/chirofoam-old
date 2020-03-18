@@ -84,7 +84,6 @@ const TAKETEST = (props) => {
     const Step3 = selectedChoices[selectedChoices.findIndex((step => step.id === 3))]
     const Step6 = selectedChoices[selectedChoices.findIndex((step => step.id === 6))]
     if (Step6.choice !== 0) {
-      console.log(selectedChoices)
       if ((Step2.choice === 1) || (Step3.choice === 1)) {
         getElement("#sorry").classList.toggle("d-none")
       } else if ((Step2.choice === 4) || (Step6.choice === 1) || ((Step2.choice === 3) && (Step3.choice === 4))) {

@@ -11,9 +11,6 @@ const Cart = () => {
   const handleCheckout = () => {
     window.open(checkout.webUrl)
   }
-  const updateCart = () => {
-    console.log(checkout);
-  }
   const line_items = checkout.lineItems.map(line_item => {
     return <LineItem key={line_item.id.toString()} line_item={line_item} />
   })
@@ -54,9 +51,9 @@ const Cart = () => {
                     </div>
                   </td>
                   <td>
-                    <button className="d-none btn-dark p-1 text-white space-1" onClick={updateCart}> UPDATE CART </button>
+                    <button className="d-none btn-dark p-1 text-white space-1"> UPDATE CART </button>
                   </td>
-                </tr> 
+                </tr>
               </tbody>
             </Table>
           </div>
@@ -66,7 +63,7 @@ const Cart = () => {
     {(checkout.lineItems.length > 0) && <section>
       <div className="container">
         <Row>
-          
+
           <ul className="pl-0 list-unstyled w-100 cart-total">
               <li className="d-flex w-100 no-gutters"><strong>CART TOTAL</strong></li>
               <li className="d-flex w-100 no-gutters"><div className="col-7">SUBTOTAL</div><div className="col-5">CAD$ {checkout.subtotalPrice}</div></li>

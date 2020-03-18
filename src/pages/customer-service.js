@@ -34,13 +34,12 @@ export default(props) => {
       }).then((response) => {
         if (response.status === 200) {
           response.json().then((responseJson) => {
-            console.log(responseJson)
             reviewForm.reset()
             setSubmitting(false)
           })
         }
       }).catch((error) => {
-        console.log(error)
+        console.error(error)
       })
     }
     sendFormData("https://contactform.hulkapps.com/ajaxcall/customcontact")

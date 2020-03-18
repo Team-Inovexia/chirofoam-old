@@ -148,10 +148,6 @@ const ArticlePage = ({data}) => {
               resetRecaptcha()
               setSubmitting(false)
             })
-          } else {
-            response.json().then((responseJson) => {
-              console.log(responseJson)
-            })
           }
         }).catch((error) => {
           console.error(error)
