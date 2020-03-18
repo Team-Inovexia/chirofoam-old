@@ -56,7 +56,7 @@ const Blogs = ({id}) => {
         }
       }
     `)
-  const token = "8e8aac347316f0b5b7e7b5897188a365"
+  const token = "44ad603380756bf8c733a15e818b9837"
   const pageInfo = allShopifyArticle.pageInfo
   const currentPage = pageInfo.currentPage
   const previousPage = (currentPage === 1)

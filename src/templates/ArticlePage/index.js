@@ -35,7 +35,7 @@ const ArticlePage = ({data}) => {
   const articleId = parseInt(atob(article.shopifyId).split("/").pop())
   const blogId = parseInt(atob(article.blog.shopifyId).split("/").pop())
   const [ip, setIp] = useState("")
-  const token = "8e8aac347316f0b5b7e7b5897188a365"
+  const token = "44ad603380756bf8c733a15e818b9837"
   const jsonToQueryString = (json) => {
     return '?' + Object.keys(json).map(function(key) {
       return encodeURIComponent(key) + '=' + encodeURIComponent(json[key])
