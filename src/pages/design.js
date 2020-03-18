@@ -58,7 +58,7 @@ const Design = (props) => {
         <div className="pl-0 pl-sm-1 pl-md-3 pl-lg-5 pl-xl-5 pt-2 pb-2 pt-sm-5 pb-sm-4" style={{
             maxWidth: '500px'
           }}>
-          <h3 className="color-primary erbaum-bold lead-text"><ScrollAnimation animateIn="fadeInUp">COOL GEL INFUSED MEMORY FOAM</ScrollAnimation></h3>
+          <ScrollAnimation animateIn="fadeInUp"><h3 className="color-primary erbaum-bold lead-text">COOL GEL INFUSED MEMORY FOAM</h3></ScrollAnimation>
           <p className="text-left filson-pro-reg space-1 pt-0 pt-sm-1 pt-md-3 pt-lg-5 pt-xl-5 mb-0 text-1 color-secondary">
             <span className="color-primary">Helps keep your body cool and relaxed during sleep</span>
             while the temperature sensitive foam adjusts to your body’s natural shape and curves. Designed for back pain relief, this foam will help to relax your joints and muscles while relieving pressure and creating the ultimate comfort while your body rests.</p>
@@ -71,7 +71,7 @@ const Design = (props) => {
         <div className="pl-0 pl-sm-1 pl-md-3 pl-lg-5 pl-xl-5 pt-2 pb-2 pt-sm-5 pb-sm-4" style={{
             maxWidth: '500px'
           }}>
-          <h3 className="color-primary erbaum-bold lead-text pl-0 pl-sm-1 pl-md-3 pl-lg-5 pl-xl-5"><ScrollAnimation animateIn="fadeInUp">FIRM SUPPORT CHIROFOAM™</ScrollAnimation></h3>
+          <ScrollAnimation animateIn="fadeInUp"><h3 className="color-primary erbaum-bold lead-text pl-0 pl-sm-1 pl-md-3 pl-lg-5 pl-xl-5">FIRM SUPPORT CHIROFOAM™</h3></ScrollAnimation>
           <p className="text-left filson-pro-reg space-1 pl-0 pl-sm-1 pl-md-3 pl-lg-5 pl-xl-5 pt-0 pt-sm-2 pt-md-3 pt-lg-5 pt-xl-5 mb-0 text-1 color-secondary">
             <span className="color-primary">An extremely durable and sag resistant layer of support foam</span>
             provides an additional “pressure relief buffer” between your body and the core support foam. This layer helps cradle and protect your muscles, joints, and bones from excess pressure during sleep. The foam creates ultra comfortable “push back” support to keep your spine in an optimal natural sleeping position, while relieving back pain.</p>
@@ -84,7 +84,7 @@ const Design = (props) => {
         <div className="pl-0 pl-sm-1 pl-md-3 pl-lg-5 pl-xl-5 pt-2 pb-2 pt-sm-5 pb-sm-4" style={{
             maxWidth: '500px'
           }}>
-          <h3 className="color-primary erbaum-bold lead-text"><ScrollAnimation animateIn="fadeInUp">CHIROFOAM™ LUMBAR SUPPORT</ScrollAnimation></h3>
+          <ScrollAnimation animateIn="fadeInUp"><h3 className="color-primary erbaum-bold lead-text">CHIROFOAM™ LUMBAR SUPPORT</h3></ScrollAnimation>
           <p className="text-left filson-pro-reg space-1 pt-0 pt-md-3 pt-lg-5 mb-0 text-1 color-secondary">
             <span className="color-primary">Our specialized layer of Chirofoam™ lumbar support</span>
             provides an additional 20% of conforming support in the centre third of the mattress for improved lumbar support and increased life span of the mattress. The majority of your body’s weight rests in the centre third of the mattress where you need the most support to keep your spine in optimal alignment while relieving back pain. The Pro Lumbar Support layer is also designed to resist sagging and keeps your mattress comfortable and more supportive even far beyond our 15 year warranty period.</p>
@@ -97,7 +97,7 @@ const Design = (props) => {
         <div className="pl-0 pl-sm-1 pl-md-3 pl-lg-5 pl-xl-5 pt-2 pb-2 pt-sm-5 pb-sm-4" style={{
             maxWidth: '500px'
           }}>
-          <h3 className="pl-0 pl-sm-1 pl-md-3 pl-xl-5 pl-lg-5 color-primary erbaum-bold lead-text"><ScrollAnimation animateIn="fadeInUp">BODY SUPPORT BIO FOAM CORE</ScrollAnimation></h3>
+          <ScrollAnimation animateIn="fadeInUp"><h3 className="pl-0 pl-sm-1 pl-md-3 pl-xl-5 pl-lg-5 color-primary erbaum-bold lead-text">BODY SUPPORT BIO FOAM CORE</h3></ScrollAnimation>
           <p className="text-left filson-pro-reg space-1 pt-0 pt-sm-2 pt-md-3 pt-lg-5 pt-xl-5 mb-0 text-1 pl-0 pl-md-3 pl-lg-5 color-secondary">
             <span className="color-primary">The core is made with a high density and ultra-resilient bio foam</span>
             designed to cradle the weight of your body and distribute pressure evenly for many years of back pain relief and peaceful sleep. The bio foam is made from soy content in a more environmentally friendly and sustainable production method which lessens your carbon footprint on our planet.</p>
@@ -172,7 +172,7 @@ const Design = (props) => {
     <Container>
       <Row className="mx-0 no-gutters">
         <Col className="left-list col-12 col-md-6 col-lg-6 px-0 px-sm-0 px-md-2 px-lg-3 px-xl-3">
-          <h5 className="erbaum-bold color-primary pb-2 pb-sm-5 text-uppercase"><ScrollAnimation animateIn="fadeInUp">SPECIALTY FEATURES OVERVIEW</ScrollAnimation></h5>
+          <ScrollAnimation animateIn="fadeInUp"><h5 className="erbaum-bold color-primary pb-2 pb-sm-5 text-uppercase">SPECIALTY FEATURES OVERVIEW</h5></ScrollAnimation>
           <ul className="pl-0 list-unstyled left-list filson-pro-reg color-secondary">
             <li>
               <strong>Cool Gel Infused Visco Memory Foam
@@ -199,7 +199,7 @@ const Design = (props) => {
           </ul>
         </Col>
         <Col className="right-list col-12 col-md-6 col-lg-6 px-0 px-sm-0 px-md-2 px-lg-3 px-xl-3">
-          <h5 className="erbaum-bold color-primary pb-2 pb-sm-5 text-uppercase"><ScrollAnimation animateIn="fadeInUp">TECHNICAL SPECIFICATIONS</ScrollAnimation></h5>
+          <ScrollAnimation animateIn="fadeInUp"><h5 className="erbaum-bold color-primary pb-2 pb-sm-5 text-uppercase">TECHNICAL SPECIFICATIONS</h5></ScrollAnimation>
           <p className="filson-pro-reg color-primary">Top Upholstery</p>
           <ul className="color-secondary filson-pro-reg">
             <li>Soft Luxurious and Breathable Removable Cover with Non-Skid Bottom.</li>

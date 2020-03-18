@@ -62,7 +62,7 @@ export default(props) => {
     <Container>
       <Row>
         <Col sm="6" className="mb-3 mb-sm-5">
-          <h5 className="erbaum-bold color-primary pb-2 pb-sm-5 mb-0 text-uppercase"><ScrollAnimation animateIn="fadeInUp">GET IN TOUCH</ScrollAnimation></h5>
+          <ScrollAnimation animateIn="fadeInUp"><h5 className="erbaum-bold color-primary pb-2 pb-sm-5 mb-0 text-uppercase">GET IN TOUCH</h5></ScrollAnimation>
           <p className="filson-pro-reg color-secondary pt-2 text-1">If you have any questions, concerns, of would like to contact us, simply fill out the contact form and a member of our team will get back to you as soon as possible. You can also email us directly: info@chirofoam.com</p>
           <p className="filson-pro-reg color-secondary pt-2 text-1">Prefer to talk to us by phone?
             <br/>

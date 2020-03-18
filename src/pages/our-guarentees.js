@@ -16,15 +16,15 @@ export default (props) => {
 	<>
 		<SEO title="OUR GUARANTEES" description="We have your back!" />
 		<Header />
-		
+
 		<section className="mb-0 py-3 position-relative">
 			<Container>
-			
+
 				<Row className="mx-0 text-center">
-					<h2 className="font-weight-bold display-5 erbaum-bold text-uppercase pt-5 space-2 pt-sm-1 pt-lg-5 pt-xl-5 color-primary w-100"><ScrollAnimation animateIn="fadeInUp">OUR GUARANTEES</ScrollAnimation></h2>
-				<p className="filson-pro-reg color-primary pt-2 space-4 proxima-r m-auto text-center px-0 px-sm-5 px-lg-5 px-xl-5 pt-sm-2 w-100" style={{fontSize:'26px'}}><ScrollAnimation animateIn="fadeInUp">We have your back!</ScrollAnimation></p>
+					<ScrollAnimation animateIn="fadeInUp"><h2 className="font-weight-bold display-5 erbaum-bold text-uppercase pt-5 space-2 pt-sm-1 pt-lg-5 pt-xl-5 color-primary w-100">OUR GUARANTEES</h2></ScrollAnimation>
+				<ScrollAnimation animateIn="fadeInUp"><p className="filson-pro-reg color-primary pt-2 space-4 proxima-r m-auto text-center px-0 px-sm-5 px-lg-5 px-xl-5 pt-sm-2 w-100" style={{fontSize:'26px'}}>We have your back!</p></ScrollAnimation>
 				</Row>
-				
+
 				<Row className="py-3 mb-0 mb-sm-5 charity-inner text-center mx-0">
 					<Col sm="6" className="mb-3 mb-sm-5 mt-3 mt-sm-5 text-center px-0 px-sm-2 px-md-2 px-lg-4 px-xl-4">
 						<div className="text-center">
@@ -54,12 +54,12 @@ export default (props) => {
 						<ScrollAnimation animateIn="fadeInUp"><h5 className="erbaum-bold color-primary pb-2 pb-sm-5 text-uppercase text-center">15 YEAR TOTAL WARRANTY PROTECTION</h5></ScrollAnimation>
 						<p className="filson-pro-reg color-secondary pt-2 text-left text-1" style={{lineHeight:'25px'}}>From the moment your Chirofoam™ mattress arrives at your door, you are covered by our 15 year total warranty protection program.  If by any chance something goes wrong with your Chirofoam™ mattress due to a defect in materials or faulty craftsmanship, we will repair or replace your mattress hassle free.</p>
 					</Col>
-					
+
 					<Col sm="12" className="mb-3 mb-sm-5 mt-3 mt-sm-5 text-center px-0 px-sm-2 px-md-2 px-lg-4 px-xl-4">
 						<div className="charity-image text-center">
 							<img className="img-fluid" src={Chirofoam_Mattress_Charity_Donations} alt="Chirofoam Mattress Charity Donations" width="100%"/>
 						</div>
-						<h5 className="erbaum-bold color-primary pb-2 pb-sm-5 text-uppercase"><ScrollAnimation animateIn="fadeInUp">CHIROFOAM WILL DONATE 1 BEDKIT FOR EVERY MATTRESS SOLD</ScrollAnimation></h5>
+						<ScrollAnimation animateIn="fadeInUp"><h5 className="erbaum-bold color-primary pb-2 pb-sm-5 text-uppercase">CHIROFOAM WILL DONATE 1 BEDKIT FOR EVERY MATTRESS SOLD</h5></ScrollAnimation>
 						<p className="filson-pro-reg color-secondary pt-2 text-1 text-left" style={{lineHeight:'25px'}}>At Chirofoam we strongly believe in giving back to the less fortunate people in the world.  Many children in underdeveloped countries do not have the luxury of sleeping in a comfortable bed among other things.  We have partnered with the Sleeping Children Around The World Charity to donate 1 bed kit to children living in poverty for every Chirofoam™ mattress sold.</p>
 					</Col>
 				</Row>
@@ -100,7 +100,7 @@ export default (props) => {
 					<p className="cta mt-0 pt-sm-4 pt-lg-4 pt-xl-4 w-100 text-center mt-4 mt-sm-0">
 						<Link to="/reviews/" className="btn-cta color-primary erbaum-bold space-1">SEE REVIEWS</Link>
 					</p>
-					<p className="filson-pro-reg color-secondary pt-3 w-75 m-auto text-center space-1" style={{fontSize:'20px'}}>Chirofoam™ Memory Foam Mattresses are proudly developed and manufactured in Toronto, ON, Canada.</p> 
+					<p className="filson-pro-reg color-secondary pt-3 w-75 m-auto text-center space-1" style={{fontSize:'20px'}}>Chirofoam™ Memory Foam Mattresses are proudly developed and manufactured in Toronto, ON, Canada.</p>
 				</Row>
 			</Container>
 		</section>

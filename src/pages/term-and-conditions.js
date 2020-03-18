@@ -13,7 +13,7 @@ export default (props) => {
 			<Container className="our-focus">
 				<Row className="mb-2 mb-sm-5 pb-0 pb-sm-5 mx-0">
 					<div>
-						<h1 className="font-weight-bold display-5 erbaum-bold mt-0 mt-sm-2 mt-lg-4 mt-xl-4 py-2 py-sm-2 py-lg-5 py-xl-5 space-2 color-primary"><ScrollAnimation animateIn="fadeInUp">Terms and Conditions</ScrollAnimation></h1>
+						<ScrollAnimation animateIn="fadeInUp"><h1 className="font-weight-bold display-5 erbaum-bold mt-0 mt-sm-2 mt-lg-4 mt-xl-4 py-2 py-sm-2 py-lg-5 py-xl-5 space-2 color-primary">Terms and Conditions</h1></ScrollAnimation>
 						<p className="filson-pro-reg text-1 color-secondary">Welcome to the Chirofoam™ website (the “Website” or Site”) maintained and operated by and on behalf of Chirofoam Mattress Company Inc. (“the Company”). This site is maintained as a service to our customers. By using this site, you are communicating with the Company electronically and agree to comply with and be bound by the following terms and conditions of use. Please review these terms and conditions carefully. If you do not agree to these terms and conditions, you should not use this website.</p>
 						<p className="filson-pro-reg text-1 color-secondary">
 							<ol className="pl-3">

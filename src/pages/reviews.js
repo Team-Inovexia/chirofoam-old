@@ -257,12 +257,13 @@ const Reviews = (props) => {
     <Container>
       <Row className="mx-0">
         <Jumbotron className="mb-0 text-center text-white bg-transparent space-1 w-100 m-auto">
-          <h2 className="font-weight-bold display-5 color-primary erbaum-bold text-uppercase pt-5 space-2"><ScrollAnimation animateIn="fadeInUp">Chirofoam™ Mattress Reviews</ScrollAnimation>
-          </h2>
+          <ScrollAnimation animateIn="fadeInUp"><h2 className="font-weight-bold display-5 color-primary erbaum-bold text-uppercase pt-5 space-2">Chirofoam™ Mattress Reviews</h2></ScrollAnimation>
+          <ScrollAnimation animateIn="fadeInUp">
           <p className="filson-pro-reg color-primary space-2 pt-5" style={{
               fontSize: '24px'
-            }}><ScrollAnimation animateIn="fadeInUp">97% Customer Satisfaction Rate</ScrollAnimation>
+            }}>97% Customer Satisfaction Rate
           </p>
+          </ScrollAnimation>
         </Jumbotron>
       </Row>
     </Container>

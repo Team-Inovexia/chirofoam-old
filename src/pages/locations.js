@@ -25,7 +25,7 @@ export default (props) => {
 			<Container className="our-focus pt-5">
 				<Row className="mb-2 mb-sm-5 pb-0 pb-sm-5">
 					<Col sm="4" className="text-center px-0 px-sm-4 mb-5 mb-sm-4 mb-lg-0 mb-xl-0">
-						<h4 className="text-uppercase color-primary erbaum-bold pb-4 location-title"><ScrollAnimation animateIn="fadeInUp">Markham</ScrollAnimation></h4>
+						<ScrollAnimation animateIn="fadeInUp"><h4 className="text-uppercase color-primary erbaum-bold pb-4 location-title">Markham</h4></ScrollAnimation>
 						<p className="filson-pro-reg color-secondary">
 							7701 Woodbine Avenue<br/>
 							Unit#5<br/>
@@ -45,7 +45,7 @@ export default (props) => {
 						</div>
 					</Col>
 					<Col sm="4" className="text-center px-0 px-sm-4 mb-5 mb-sm-4 mb-lg-0 mb-xl-0">
-						<h4 className="text-uppercase color-primary erbaum-bold pb-4 location-title"><ScrollAnimation animateIn="fadeInUp">Mississauga</ScrollAnimation></h4>
+						<ScrollAnimation animateIn="fadeInUp"><h4 className="text-uppercase color-primary erbaum-bold pb-4 location-title">Mississauga</h4></ScrollAnimation>
 						<p className="filson-pro-reg color-secondary">
 							1550 Meyerside Drive<br/>
 							Unit#3<br/>
@@ -65,7 +65,7 @@ export default (props) => {
 						</div>
 					</Col>
 					<Col sm="4" className="text-center px-0 px-sm-4 mb-5 mb-sm-4 mb-lg-0 mb-xl-0">
-						<h4 className="text-uppercase color-primary erbaum-bold pb-4 location-title"><ScrollAnimation animateIn="fadeInUp">Milton/Georgetown</ScrollAnimation></h4>
+						<ScrollAnimation animateIn="fadeInUp"><h4 className="text-uppercase color-primary erbaum-bold pb-4 location-title">Milton/Georgetown</h4></ScrollAnimation>
 						<p className="filson-pro-reg color-secondary">
 							15 Brownridge Road<br/>
 							Unit#3<br/>

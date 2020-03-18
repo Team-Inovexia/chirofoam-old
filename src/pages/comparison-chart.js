@@ -36,7 +36,7 @@ export default (props) => {
 										<li>TOTAL MEMORY FOAM</li>
 										<li>COOLING FEATURES</li>
 										<li>LUMBAR SUPPORT</li>
-										<li>TOTAL THICKNESS 12" OR MORE</li>
+										<li>TOTAL THICKNESS 12&quot; OR MORE</li>
 										<li>FIRMNESS</li>
 										<li>CHIROPRACTOR RECOMMENDED</li>
 										<li>FREE SHIPPING</li>
