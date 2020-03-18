@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from "gatsby"
 import Header from "../components/header"
 import Footer from "../components/footer"
-import {Container,Jumbotron, Row, Col, Form} from 'reactstrap';
+import {Container, Row, Col} from 'reactstrap';
 import logo from "../assets/img/logo2.png"
 import ScrollAnimation from 'react-animate-on-scroll'
 
@@ -43,7 +43,7 @@ export default (props) => {
 										<li>FULL MONEY BACK RETURNS</li>
 										<li>SLEEP TRIAL</li>
 										<li>WARRANTY</li>
-										<li><a href="#" className="text-dark">HONEST MATTRESS REVIEWS RATING</a></li>
+										<li><button className="p-0 bg-transparent border-0 ext-dark">HONEST MATTRESS REVIEWS RATING</button></li>
 									</ul>
 								</div>
 								<div className="row-list">
