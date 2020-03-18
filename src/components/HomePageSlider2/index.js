@@ -122,7 +122,8 @@ const HomePageSlider2 = (props) => {
               </Row>
             </Container>
           </section>
-        </CarouselItem>)break;
+        </CarouselItem>)
+        break;
       case 1:
         return (<CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} style={{
             maxHeight: '500px'
@@ -202,7 +203,8 @@ const HomePageSlider2 = (props) => {
               </Container>
             </div>
           </section>
-        </CarouselItem>)break;
+        </CarouselItem>)
+        break;
       case 2:
         return (<CarouselItem onExiting={() => setAnimating(true)} onExited={() => setAnimating(false)} style={{
             maxHeight: '500px'
@@ -252,7 +254,8 @@ const HomePageSlider2 = (props) => {
               </Container>
             </div>
           </section>
-        </CarouselItem>)break;
+        </CarouselItem>)
+        break;
       default:
     }
   });
