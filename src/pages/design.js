@@ -142,7 +142,7 @@ const Design = (props) => {
         <div className="chirofoam-video mx-auto">
           <video className="" poster={poster} width="100%" controls="controls" autoPlay={true} preload="auto" loop="loop" muted="muted">
             <source src="//chirofoam.com/wp-content/uploads/2016/08/Chiro%20Video%202%20HD%20recut%20final_2.mp4" type="video/mp4" />
-            <track kind="captions" default={true} srclang="en" />
+            <track kind="captions" default={true} srcLang="en" />
           </video>
         </div>
       </Row>
