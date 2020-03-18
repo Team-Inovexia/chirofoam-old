@@ -5,7 +5,7 @@
  */
 
 // You can delete this file if you're not using it
-import "../assets/css/bootstrap.min.css"
+import "./assets/css/bootstrap.min.css"
 import "./src/assets/css/custom.min.css"
 import "./src/assets/css/responsive.min.css"
 import "./src/assets/css/font-awesome.min.css"
