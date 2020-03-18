@@ -51,8 +51,8 @@ const Reviews = (props) => {
   const closeModal = () => setModal(false)
   const openModal = (e, id, item) => {
     const image = item.title.includes('XF')
-      ? '//cdn.shopify.com/s/files/1/0254/7731/6663/products/chrofoam-xf-queen-10NNew-600x307_1_large.jpg'
-      : '//cdn.shopify.com/s/files/1/0254/7731/6663/products/Chirofoam-Memory-Foam-Mattress-Angle-4-600x307_large.jpg'
+      ? '//cdn.shopify.com/s/files/1/0351/5478/8487/products/chrofoam-xf-queen-10NNew-600x307_1_large.jpg'
+      : '//cdn.shopify.com/s/files/1/0351/5478/8487/products/Chirofoam-Memory-Foam-Mattress-Angle-4-600x307_large.jpg'
     setProductID(id)
     setProductHandle(item.handle)
     setProductTitle(item.title)

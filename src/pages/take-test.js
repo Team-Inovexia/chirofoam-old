@@ -100,7 +100,7 @@ const TAKETEST = (props) => {
       getElement("#result").classList.toggle("d-none")
     }
   }
-  return (<> < SEO title = "TAKE THE TEST" description = "We understand that everyone has different needs and there is no such thing as the perfect mattress that works for everyone. This is why we have created the Chirofoam test to see if the Chirofoam mattress is the right fit for you." /> <Header/>
+  return (<> <SEO title="TAKE THE TEST" description="We understand that everyone has different needs and there is no such thing as the perfect mattress that works for everyone. This is why we have created the Chirofoam test to see if the Chirofoam mattress is the right fit for you." /><Header/>
   <section className="mb-0 py-3 pb-lg-5 pb-xl-5" id="start-test">
     <Container className="pb-lg-5 pb-xl-5">
       <Row className="mx-0">
