@@ -12,7 +12,7 @@ export default (props) => {
 		<section className="blue-bg warranty-banner height-350">
 			<Jumbotron className="mb-0 text-center text-white bg-transparent space-1 Jumbotron">
 				<ScrollAnimation animateIn="fadeInUp"><h1 className="font-weight-bold display-5 erbaum-bold text-uppercase pt-5 space-2">CHIROFOAM™ MEMORY FOAM MATTRESS</h1></ScrollAnimation>
-				<ScrollAni/mation animateIn="fadeInUp"><p className="space-4 proxima-r text-white m-auto text-center px-0 px-sm-5 px-lg-5 px-xl-5 pt-2 pt-sm-4" style={{width:'90%',fontSize:'26px'}}>15 Year Total Warranty Protection</p></ScrollAnimation>
+				<ScrollAnimation animateIn="fadeInUp"><p className="space-4 proxima-r text-white m-auto text-center px-0 px-sm-5 px-lg-5 px-xl-5 pt-2 pt-sm-4" style={{width:'90%',fontSize:'26px'}}>15 Year Total Warranty Protection</p></ScrollAnimation>
 			</Jumbotron>
 		</section>
 		<section className="py-5 position-relative">
