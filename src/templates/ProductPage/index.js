@@ -50,7 +50,7 @@ const ProductPage = ({ data }) => {
   const toggleModal = (event, imgSrc) => {
     setModalImage(imgSrc)
     setModal(true)
-  }  
+  }
 
   const externalCloseBtn = <button className="close" style={{position:'absolute',top:'0',right:'15px',fontSize:'3em',color:'#fff'}} onClick={closeModal}>&times;</button>;
   const slides = product.images.map(image => {
@@ -79,9 +79,9 @@ const ProductPage = ({ data }) => {
 
   return (
     <>
-      <SEO title={product.title} description={product.description} />
+      <SEO title={product.title} description={product.description} image={product.images[0].originalSrc} />
       <Header />
-      
+
       <section className="mt-4 mb py-5" style={{backgroundColor:'#fff'}}>
       <Container>
         <Row className="no-gutters pb-2 pb-sm-5">
@@ -114,9 +114,9 @@ const ProductPage = ({ data }) => {
               </button>
             </div>
               ))}
-          </div>  
+          </div>
           </Col>
-          <Col lg="6" className="pl-lg-5 pl-sm-2 pl-0 pt-0 pt-sm-0 color-primary single-product-desc text-center text-lg-left">  
+          <Col lg="6" className="pl-lg-5 pl-sm-2 pl-0 pt-0 pt-sm-0 color-primary single-product-desc text-center text-lg-left">
              <h3 className="erbaum-bold pb-3 color-primary d-none d-lg-block">{product.title}</h3>
               <ProductDescription className="filson-pro-reg space-1 mt-0"
                 dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
@@ -188,7 +188,7 @@ const ProductPage = ({ data }) => {
           <Media className="px-3 px-sm-5 mb-1 d-block d-sm-flex">
               <Media left middle>
               <h4 className="lead-text-font color-primary erbaum-bold display-5 d-none">HEADING</h4>
-              <p className="color-primary proxima-r space-1 text-1" style={{paddingTop:'30px', lineHeight:'30px'}}>CertiPUR-US® approved foams are made without ozone depleters, made without PBDE flame retardants made without mercury, lead and other heavy metals, made without formaldehyde. </p> 
+              <p className="color-primary proxima-r space-1 text-1" style={{paddingTop:'30px', lineHeight:'30px'}}>CertiPUR-US® approved foams are made without ozone depleters, made without PBDE flame retardants made without mercury, lead and other heavy metals, made without formaldehyde. </p>
               </Media>
               <Media body middle className="pl-sm-4 pl-0 pb-3">
                 <img src={us} alt="us" width="150px"/>
@@ -196,7 +196,7 @@ const ProductPage = ({ data }) => {
           </Media>
           <Media className="px-3 px-sm-5 mb-1 d-block d-sm-flex">
               <Media left middle>
-              <p className="color-primary proxima-r space-1 text-1" style={{paddingTop:'30px', lineHeight:'30px'}}>Eco institut tested for emission analysis in the test chamber according to ISO 16000. compound analyses for heavy metals. AOX/EOX, biocides, phthalates, flame retatdants etc... odour testing according to VDA, toxicological and ecological expertise.</p>  
+              <p className="color-primary proxima-r space-1 text-1" style={{paddingTop:'30px', lineHeight:'30px'}}>Eco institut tested for emission analysis in the test chamber according to ISO 16000. compound analyses for heavy metals. AOX/EOX, biocides, phthalates, flame retatdants etc... odour testing according to VDA, toxicological and ecological expertise.</p>
               </Media>
               <Media body middle className="pl-sm-4 pl-0 pb-3">
                 <img src={eco} alt="eco" width="150px"/>
@@ -204,7 +204,7 @@ const ProductPage = ({ data }) => {
           </Media>
           <Media className="px-3 px-sm-5 mb-1 d-block d-sm-flex">
               <Media left middle>
-              <p className="color-primary proxima-r space-1 text-1" style={{paddingTop:'30px', lineHeight:'30px'}}>Confidence In Textile Oeko-Tex® standard 100 certified provide extensive testing on the fabrics to ensure that no substances are present that could be harmful to human. Oeko-Tex® standard 100 is an international certification that set limits for over 100 harmful chemicals, substances, and emissions in textiles.</p>  
+              <p className="color-primary proxima-r space-1 text-1" style={{paddingTop:'30px', lineHeight:'30px'}}>Confidence In Textile Oeko-Tex® standard 100 certified provide extensive testing on the fabrics to ensure that no substances are present that could be harmful to human. Oeko-Tex® standard 100 is an international certification that set limits for over 100 harmful chemicals, substances, and emissions in textiles.</p>
               </Media>
               <Media body middle className="pl-sm-4 pl-0 pb-3">
                 <img src={confidence} alt="confidence" width="150px"/>
@@ -237,7 +237,7 @@ const ProductPage = ({ data }) => {
                   <p className="filson-pro-reg text-1 pt-3">Bio Foam Support Core</p>
                   <img src={circle1} alt="Bio Foam Support Core" width="150px" height="150px" />
                 </div>
-                
+
                </div>
             </div>
             <div className="key-tooltip key-tooltip-2">
@@ -246,7 +246,7 @@ const ProductPage = ({ data }) => {
                   <p className="filson-pro-reg text-1 pt-3">Chirofoam Lumbar Support</p>
                   <img src={circle4} alt="Chirofoam Lumbar Support" width="150px" height="150px" />
                 </div>
-                
+
                </div>
             </div>
             <div className="key-tooltip key-tooltip-3">
@@ -255,7 +255,7 @@ const ProductPage = ({ data }) => {
                   <p className="filson-pro-reg text-1 pt-3">Firm Support Chirofoam™</p>
                   <img src={circle5} alt="Firm Support Chirofoam™" width="150px" height="150px" />
                 </div>
-                
+
                </div>
             </div>
             <div className="key-tooltip key-tooltip-4">
@@ -264,7 +264,7 @@ const ProductPage = ({ data }) => {
                   <p className="filson-pro-reg text-1 pt-3">Cool Gel Infused Memory Foam</p>
                   <img src={circle2} alt="Cool Gel Infused Memory Foam" width="150px" height="150px" />
                 </div>
-                
+
                </div>
             </div>
             <div className="key-tooltip key-tooltip-5">
@@ -273,7 +273,7 @@ const ProductPage = ({ data }) => {
                   <p className="filson-pro-reg text-1 pt-3">Soft Cotton Cover with Ultra Durable Denim Border</p>
                   <img src={circle3} alt="Soft Cotton Cover with Ultra Durable Denim Border" width="150px" height="150px" />
                 </div>
-                
+
                </div>
             </div>
           </Col>
@@ -284,7 +284,7 @@ const ProductPage = ({ data }) => {
 
      <Modal
       size="lg"
-      isOpen={modal} 
+      isOpen={modal}
       toggle={closeModal}
       centered={true}
       contentClassName="rounded-0 bg-transparent border-0"
