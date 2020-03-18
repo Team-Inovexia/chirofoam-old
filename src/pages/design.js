@@ -5,7 +5,6 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import {Container, Row, Col} from 'reactstrap'
 import SEO from '../components/seo'
-import "../assets/css/bootstrap.min.css"
 import Pur from "../assets/img/certipur-logo-nobkgrd-250px-1.png"
 import Ecoinstitute from "../assets/img/ecoinstitute.png"
 import conni1 from "../assets/img/conni1.jpg"
@@ -38,7 +37,7 @@ const Design = (props) => {
     window.addEventListener('resize', sizeReset)
   }, [])
   return (<> <SEO title="Design" /> <Header/>
-          
+
   <ScrollAnimation animateIn="fadeInUp">
   <section className="mb-0 py-3 position-relative">
     <Container>
@@ -168,7 +167,7 @@ const Design = (props) => {
       </Row>
     </Container>
   </section>
-  
+
   <section className="pt-3">
     <Container>
       <Row className="mx-0 no-gutters">

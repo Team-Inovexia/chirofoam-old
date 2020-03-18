@@ -1,7 +1,6 @@
 import React from "react"
 import {Link} from "gatsby"
 import {Row, Col} from 'reactstrap';
-import "../assets/css/bootstrap.min.css"
 import Stickytest from '../components/Stickytest'
 import payment from "../assets/img/payment.png"
 import bbb from "../assets/img/bbb.png"

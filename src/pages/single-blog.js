@@ -3,7 +3,6 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import {Row, Col} from 'reactstrap'
 import { graphql } from 'gatsby'
-import "../assets/css/bootstrap.min.css"
 import blogs1 from "../assets/img/blogs5.jpg"
 import girl from "../assets/img/girl.jpg"
 import RecentPosts from "../components/Blogs/RecentPostsFooter"

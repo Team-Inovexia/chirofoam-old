@@ -4,7 +4,6 @@ import Footer from "../components/footer"
 import {Jumbotron, Row, Col} from 'reactstrap';
 import SEO from '~/components/seo'
 import {Link} from "gatsby"
-//import "../assets/css/bootstrap.min.css"
 import Cart from "../components/Cart"
 
 
@@ -37,7 +36,7 @@ export default (props) => {
 					<p className="cta mt-0 pt-sm-4 pt-lg-4 pt-xl-4 w-100 text-center mt-4 mt-sm-0">
 						<Link to="/reviews/" className="btn-cta color-primary erbaum-bold space-1">SEE REVIEWS</Link>
 					</p>
-					<p className="filson-pro-reg color-secondary pt-3 w-75 m-auto text-center space-1" style={{fontSize:'20px'}}>Chirofoam™ Memory Foam Mattresses are proudly developed and manufactured in Toronto, ON, Canada.</p> 
+					<p className="filson-pro-reg color-secondary pt-3 w-75 m-auto text-center space-1" style={{fontSize:'20px'}}>Chirofoam™ Memory Foam Mattresses are proudly developed and manufactured in Toronto, ON, Canada.</p>
 				</Row>
 			</div>
 		</section>

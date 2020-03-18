@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import {Container,Jumbotron, Row, Col} from 'reactstrap';
-import "../assets/css/bootstrap.min.css"
 import confirm from "../assets/img/confirm.png"
 import support from "../assets/img/support.png"
 import alignment from "../assets/img/allignment.png"
@@ -54,7 +53,7 @@ export default (props) => {
 						</div>
 						<h5 className="erbaum-bold space-3 color-primary pb-2 pb-sm-2 pb-lg-4 pb-xl-4 mb-0 text-uppercase" style={{fontSize:'1.10rem'}}><ScrollAnimation animateIn="fadeInUp">alignment</ScrollAnimation></h5>
 						<p className="filson-pro-reg color-secondary pt-2 text-1">With the ideal combination of conformity and support, Chirofoam™ is designed to keep your spine aligned with its natural curves while you sleep. This is important to relieve pressure which can build up during the day from improper posture, improper lifting, or from sitting for long periods of time. Proper spine alignment while you sleep is a key element to relieving back pain, increased muscle recovery and feeling better in the morning overall.</p>
-						
+
 					</Col>
 					<Col sm="6" className="mb-3 mb-sm-2 mb-md-2 mb-lg-4 mb-xl-5 px-0 px-sm-2 px-md-3 px-lg-3 px-xl-3">
 						<div className="charity-image text-center w-100 pb-2 pb-sm-0">
@@ -73,7 +72,7 @@ export default (props) => {
 				</Row>
 			</Container>
 		</section>
-	<ScrollAnimation animateIn="fadeInUp">	
+	<ScrollAnimation animateIn="fadeInUp">
 	  <section>
 			<Container>
 				<Row className="text-center">
@@ -125,13 +124,13 @@ export default (props) => {
 			</Container>
 		</section>
 	  </ScrollAnimation>
-	  <ScrollAnimation animateIn="fadeInUp">	
+	  <ScrollAnimation animateIn="fadeInUp">
 		<section>
 			<Container className="py-3 py-sm-5 py-lg-5 py-xl-5">
 				<Row>
 					<h3 className="text-center lead-text lead-sm-text lead-md-text lead-lg-text lead-xl-text color-primary erbaum-bold w-100 pb-2 pb-sm-5 text-uppercase">Chirofoam™ is trusted every night by: </h3>
 				</Row>
-				<Row>	
+				<Row>
 					<Col sm="3" className="text-center px-2 erbaum text-uppercase check-text proxima-r">
 						<p className="mb-2">✓  Doctors</p>
 						<p>✓  Chiropractors</p>
@@ -171,7 +170,7 @@ export default (props) => {
 				</Row>
 			</Container>
 		</section>
-	  <ScrollAnimation animateIn="fadeInUp">	
+	  <ScrollAnimation animateIn="fadeInUp">
 		<section className="rating-and-review py-3 py-sm-5 mb-4 mb-sm-0">
 			<Container className="pb-0 pb-sm-5">
 				<Row>
@@ -186,7 +185,7 @@ export default (props) => {
 					<p className="cta mt-0 pt-sm-4 pt-lg-4 pt-xl-4 w-100 text-center mt-4 mt-sm-0">
 						<Link to="/reviews/" className="btn-cta color-primary erbaum-bold space-1">SEE REVIEWS</Link>
 					</p>
-					<p className="filson-pro-reg color-secondary pt-3 w-75 m-auto text-center space-1" style={{fontSize:'20px'}}>Chirofoam™ Memory Foam Mattresses are proudly developed and manufactured in Toronto, ON, Canada.</p> 
+					<p className="filson-pro-reg color-secondary pt-3 w-75 m-auto text-center space-1" style={{fontSize:'20px'}}>Chirofoam™ Memory Foam Mattresses are proudly developed and manufactured in Toronto, ON, Canada.</p>
 				</Row>
 			</Container>
 		</section>

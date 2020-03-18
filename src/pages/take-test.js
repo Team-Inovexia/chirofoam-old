@@ -13,7 +13,6 @@ import {
   TabPane
 } from 'reactstrap'
 import SEO from '~/components/seo'
-import "../assets/css/bootstrap.min.css"
 import xf1 from "~/assets/img/xf1.jpg"
 import ol1 from "~/assets/img/ol1.jpg"
 import step1_img from "../assets/img/Chirofoam-Step1-SleepPosition.png"

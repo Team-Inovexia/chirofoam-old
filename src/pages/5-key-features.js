@@ -4,7 +4,6 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import {Container, Row, Col} from 'reactstrap';
 import SEO from '../components/seo'
-import "../assets/css/bootstrap.min.css"
 import coolgel from "../assets/img/Cool-Gel-Memory-Foam-1.jpg"
 import support from "../assets/img/support.jpg"
 import latex from "../assets/img/latex-5keyfeatures.jpg"
@@ -28,7 +27,7 @@ export default (props) => {
 			</ScrollAnimation>
 		</section>
     	<section className="mb-0 py-3 position-relative features">
-				
+
       		<Container className="pt-5 five-key-features-outer">
 		        <Row className="mb-2 mb-sm-5 pb-0 pb-sm-5 mx-0 no-gutters">
 					<div className="col-12 col-sm-6 col-lg-5 col-xl-5 pt-2 mt-0 right-card d-flex mb-2 mb-sm-5 mb-md-0 mb-lg-0 mb-xl-0">
@@ -107,12 +106,12 @@ export default (props) => {
 				</Row>
 			</Container>
 		</section>
-	<ScrollAnimation animateIn="fadeInUp">	
+	<ScrollAnimation animateIn="fadeInUp">
 		<section className="rating-and-review py-3 py-sm-5 mb-4 mb-sm-0">
-		
+
 			<Container className="pb-0 pb-sm-5">
 				<Row className="mx-0">
-					
+
 					<p className="text-center w-100 star">
 						<i className="fa fa-star star-small"></i>
 						<i className="fa fa-star star-medium ml-2"></i>
@@ -120,12 +119,12 @@ export default (props) => {
 						<i className="fa fa-star star-medium mr-2"></i>
 						<i className="fa fa-star star-small"></i>
 					</p>
-	
+
 					<p className="filson-pro-reg color-secondary pt-3 w-75 m-auto text-center space-1" style={{fontSize:'20px'}}>“A great quality mattress I enjoy waking up on every day…” <br/>  -Mark F. from Toronto, Ontario</p>
 					<p className="cta mt-0 pt-sm-4 pt-lg-4 pt-xl-4 w-100 text-center mt-4 mt-sm-0">
 						<Link to="/reviews/" className="btn-cta color-primary erbaum-bold space-1">SEE REVIEWS</Link>
 					</p>
-					<p className="filson-pro-reg color-secondary pt-3 w-75 m-auto text-center space-1" style={{fontSize:'20px'}}>Chirofoam™ Memory Foam Mattresses are proudly developed and manufactured in Toronto, ON, Canada.</p> 
+					<p className="filson-pro-reg color-secondary pt-3 w-75 m-auto text-center space-1" style={{fontSize:'20px'}}>Chirofoam™ Memory Foam Mattresses are proudly developed and manufactured in Toronto, ON, Canada.</p>
 				</Row>
 			</Container>
 

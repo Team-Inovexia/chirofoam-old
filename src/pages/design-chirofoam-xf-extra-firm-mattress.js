@@ -4,7 +4,6 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import {Container, Row, Col} from 'reactstrap';
 import SEO from '../components/seo'
-import "../assets/css/bootstrap.min.css"
 import Pur from "../assets/img/certipur-logo-nobkgrd-250px-1.png"
 import Ecoinstitute from "../assets/img/ecoinstitute.png"
 import conni1 from "../assets/img/conni1.jpg"
@@ -28,7 +27,7 @@ export default (props) => {
 		<section className="py-4 pt-sm-5 pb-sm-4 our-customer">
 			<Row className="pt-3 pb-3 pb-sm-0 no-gutters">
 				<Col sm="6" className="coolgel-img design-imgs">
-					
+
 				</Col>
 				<Col sm="6" className="pt-5 pb-5 px-3">
 					<div className="pl-5 pl-sm-5 pt-2 pb-2 pt-sm-5 pb-sm-4" style={{maxWidth:'500px'}}>
@@ -45,12 +44,12 @@ export default (props) => {
 					</div>
 				</Col>
 				<Col sm="6" className="latex-img design-imgs">
-					
+
 				</Col>
 			</Row>
 			<Row className="pb-3 pb-sm-0 no-gutters">
 				<Col sm="6" className="design-imgs support-img">
-					
+
 				</Col>
 				<Col sm="6" className="pt-5 pb-5 px-3">
 					<div className="pl-5 pl-sm-5 pt-2 pb-2 pt-sm-5 pb-sm-4" style={{maxWidth:'500px'}}>
@@ -67,7 +66,7 @@ export default (props) => {
 					</div>
 				</Col>
 				<Col sm="6" className="design-imgs foam-img">
-					
+
 				</Col>
 			</Row>
 		</section>
@@ -175,7 +174,7 @@ export default (props) => {
 					<p className="cta mt-0 pt-sm-4 pt-lg-4 pt-xl-4 w-100 text-center mt-4 mt-sm-0">
 						<Link to="/reviews/" className="btn-cta color-primary erbaum-bold space-1">SEE REVIEWS</Link>
 					</p>
-					<p className="filson-pro-reg color-secondary pt-3 w-75 m-auto text-center space-1" style={{fontSize:'20px'}}>Chirofoam™ Memory Foam Mattresses are proudly developed and manufactured in Toronto, ON, Canada.</p> 
+					<p className="filson-pro-reg color-secondary pt-3 w-75 m-auto text-center space-1" style={{fontSize:'20px'}}>Chirofoam™ Memory Foam Mattresses are proudly developed and manufactured in Toronto, ON, Canada.</p>
 				</Row>
 			</Container>
 		</section>

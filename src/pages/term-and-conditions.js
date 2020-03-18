@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import {Container, Row, Col} from 'reactstrap';
-import "../assets/css/bootstrap.min.css"
 import ScrollAnimation from 'react-animate-on-scroll'
 
 export default (props) => {
@@ -19,7 +18,7 @@ export default (props) => {
 						<p className="filson-pro-reg text-1 color-secondary">
 							<ol className="pl-3">
 								<li>
-									Agreement <br/> 
+									Agreement <br/>
 									This Agreement (“the” Agreement”) specifies the Terms and Conditions for access to and use of the Website and describes the terms and conditions applicable to your access to and use of the Website. This Agreement may be modified at any time by the Company upon posting of the modified agreement. Any such modifications shall be effective immediately. You can view the most recent version of these terms at any time at https://chirofoam.com/terms-and-conditions. Each use by you shall constitute and be deemed your unconditional acceptance of this Agreement.
 								</li>
 								<li>
@@ -27,7 +26,7 @@ export default (props) => {
 									Your visit to our site is also governed by our Privacy Policy. Please review our Privacy Policy at [www.chirofoam.com/privacy-policy].
 								</li>
 								<li>
-									Ownership 
+									Ownership
 									<ol className="pl-3">
 										<li>Website. All content included on this Website is and shall continue to be the property of the Company or its affiliates and content suppliers and is protected under applicable copyright, patent, trademark, and other proprietary rights. Any copying, redistribution, use or publication by you of any such content or any part of the Website is prohibited, except as expressly permitted in this Agreement. Under no circumstances will you acquire any ownership rights or other interest in any content by or through your use of this Website. </li>
 										<li>Feedback. You agree that submission of any ideas, suggestions, documents, and/or proposals to Company through its suggestion, feedback, wiki, forum or similar pages (“Feedback”) is at your own risk and that Company has no obligations (including without limitation obligations of confidentiality) with respect to such Feedback. You represent and warrant that you have all rights necessary to submit the Feedback. You hereby grant to Company a fully paid, royalty-free, perpetual, irrevocable, worldwide, non-exclusive, and fully sub licensable right and license to use, reproduce, perform, display, distribute, adapt, modify, re-format, create derivative works of, and otherwise commercially or non-commercially exploit in any manner, any and all Feedback, and to sublicense the foregoing rights.</li>
@@ -44,7 +43,7 @@ export default (props) => {
 								<li>
 									Website Use <br/>
 									The Company grants you a limited, revocable, nonexclusive license to use this Website solely for your own personal use and not for republication, distribution, assignment, sublicense, sale, preparation of derivative works, or other use. You agree not to copy materials on the Website, reverse engineer or break into the Website, or use materials, products or services in violation of any law. The use of this Website is at the discretion of the Company and the Company may terminate your use of this Website at any time.
-								</li> 
+								</li>
 								<li>
 									Purchase Terms
 									<ol className="pl-3">
@@ -99,7 +98,7 @@ export default (props) => {
 					</div>
 				</Row>
 			</Container>
-		</section>		
+		</section>
 		<section>
 			<Container>
 				<Row className="py-3 py-sm-5 mb-0 mb-sm-5">
@@ -135,7 +134,7 @@ export default (props) => {
 					<p className="cta mt-0 pt-sm-4 pt-lg-4 pt-xl-4 w-100 text-center">
 						<Link to="/reviews/" className="btn-cta color-primary erbaum-bold space-1">SEE REVIEWS</Link>
 					</p>
-					<p className="filson-pro-reg color-secondary pt-3 w-75 m-auto text-center space-1" style={{fontSize:'20px'}}>Chirofoam™ Memory Foam Mattresses are proudly developed and manufactured in Toronto, ON, Canada.</p> 
+					<p className="filson-pro-reg color-secondary pt-3 w-75 m-auto text-center space-1" style={{fontSize:'20px'}}>Chirofoam™ Memory Foam Mattresses are proudly developed and manufactured in Toronto, ON, Canada.</p>
 				</Row>
 			</Container>
 		</section>

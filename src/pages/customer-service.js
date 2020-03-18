@@ -4,7 +4,6 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import {Container, Jumbotron, Row, Col} from 'reactstrap'
 import SEO from '~/components/seo'
-import "../assets/css/bootstrap.min.css"
 import "~/assets/css/bootstrap.min.css"
 import ScrollAnimation from 'react-animate-on-scroll'
 
@@ -47,7 +46,7 @@ export default(props) => {
     sendFormData("https://contactform.hulkapps.com/ajaxcall/customcontact")
   }
 
-  return (<> <SEO title="CUSTOMER SERVICE" /> <Header /> 
+  return (<> <SEO title="CUSTOMER SERVICE" /> <Header />
 		<ScrollAnimation animateIn="fadeInUp">
 		<section>
     <div className="container-large">

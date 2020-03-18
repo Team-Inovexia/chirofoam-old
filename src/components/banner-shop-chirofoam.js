@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
-import "../assets/css/bootstrap.min.css"
 import shop_banner from "../assets/img/Chirofoam_Home-jumping.png"
 
 const Banner = () => (
@@ -14,7 +13,7 @@ const Banner = () => (
 						<a href="#product" className="btn-cta color-primary erbaum-bold space-1">BUY NOW</a>
 					</p>
 				</Col>
-				<Col md="5">			
+				<Col md="5">
 					<img src={shop_banner} alt="shop_banner" width="100%"/>
 				</Col>
 			</Row>

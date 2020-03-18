@@ -3,7 +3,6 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import {Jumbotron, Row} from 'reactstrap';
 import SEO from '~/components/seo'
-import "../assets/css/bootstrap.min.css"
 import Blogs from "../components/Blogs"
 import RecentBlogs from "../components/Blogs/RecentBlogs"
 import ScrollAnimation from 'react-animate-on-scroll'

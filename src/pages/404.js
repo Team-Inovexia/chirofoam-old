@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import {Container,Jumbotron, Row, Col, Card, CardBody, UncontrolledCollapse} from 'reactstrap';
-import "../assets/css/bootstrap.min.css"
 
 const FourZeroFour = (props) => {
 
@@ -22,8 +21,8 @@ const FourZeroFour = (props) => {
 					</div>
 			</Container>
 		</section>
-		
-		
+
+
 		<Footer />
 	</>
   );

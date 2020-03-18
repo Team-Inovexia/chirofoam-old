@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "gatsby";
 import { Collapse, Navbar, NavbarToggler, Nav, NavItem, UncontrolledDropdown, DropdownToggle, DropdownMenu } from "reactstrap";
 import StoreContext from "~/context/StoreContext";
-import "../assets/css/bootstrap.min.css";
 import logo from "../assets/img/logo-home.png";
 import madeIn from "../assets/img/canadian-made.png";
 

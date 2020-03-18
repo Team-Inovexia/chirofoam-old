@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../components/header'
 import {Row, Col} from 'reactstrap';
-import "../assets/css/bootstrap.min.css"
 import "../assets/css/animate.css"
 import HomeBannerSlider from '../components/HomeBannerSlider'
 

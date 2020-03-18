@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import {Container,Jumbotron, Row, Col} from 'reactstrap';
-import "../assets/css/bootstrap.min.css"
 import amazon from "../assets/img/amazon.jpg"
 import best from "../assets/img/best.png"
 import nm from "../assets/img/nm.png"
@@ -13,7 +12,7 @@ export default (props) => {
   return (
 	<>
 		<Header />
-	  
+
 		<section className="blue-bg">
 	  <ScrollAnimation animateIn="fadeInUp">
 			<Jumbotron className="mb-0 text-center text-white bg-transparent space-1">
@@ -21,7 +20,7 @@ export default (props) => {
 			</Jumbotron>
 	   </ScrollAnimation>
 		</section>
-	 
+
 		<section className="mb-0 pt-5 pb-3 position-relative" id="locations-inner">
 			<Container className="our-focus pt-5">
 				<Row className="mb-2 mb-sm-5 pb-0 pb-sm-5">

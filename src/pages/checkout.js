@@ -3,7 +3,6 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import {Link} from "gatsby";
 import {Jumbotron, Row, Col, Table, Form, FormGroup, Label, Input} from 'reactstrap';
-import "../assets/css/bootstrap.min.css"
 import paypal from "../assets/img/paypal.jpg"
 import cards from "../assets/img/cards.png"
 
@@ -178,7 +177,7 @@ export default (props) => {
 								</Label><br/>
 								<p className="color-secondary p-2 bg-light">Pay via PayPal. You can pay with your credit card if you don’t have a PayPal account.</p>
 								<Label>
-									<Input type="radio" id="pay" name="pay" className="position-relative" /> Credit Card (Via PayPal Secure Server) <img src={cards} alt="Cards" /> 
+									<Input type="radio" id="pay" name="pay" className="position-relative" /> Credit Card (Via PayPal Secure Server) <img src={cards} alt="Cards" />
 								</Label>
 							</FormGroup>
 						</div>
@@ -212,7 +211,7 @@ export default (props) => {
 					<p className="cta mt-0 pt-sm-4 pt-lg-4 pt-xl-4 w-100 text-center">
 						<Link to="/reviews/" className="btn-cta color-primary erbaum-bold space-1">SEE REVIEWS</Link>
 					</p>
-					<p className="filson-pro-reg color-secondary pt-3 w-75 m-auto text-center space-1" style={{fontSize:'20px'}}>Chirofoam™ Memory Foam Mattresses are proudly developed and manufactured in Toronto, ON, Canada.</p> 
+					<p className="filson-pro-reg color-secondary pt-3 w-75 m-auto text-center space-1" style={{fontSize:'20px'}}>Chirofoam™ Memory Foam Mattresses are proudly developed and manufactured in Toronto, ON, Canada.</p>
 				</Row>
 			</div>
 		</section>
