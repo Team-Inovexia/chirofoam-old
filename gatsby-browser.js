@@ -8,4 +8,4 @@
 import "./src/assets/css/custom.min.css"
 import "./src/assets/css/responsive.min.css"
 import "./src/assets/css/font-awesome.min.css"
-import "./src/fonts/fonts.css"
+import "./src/fonts/fonts.min.css"
