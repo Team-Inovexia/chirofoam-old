@@ -42,7 +42,7 @@ module.exports = {
         // The domain name of your Shopify shop. This is required.
         // Example: 'gatsby-source-shopify-test-shop' if your Shopify address is
         // 'gatsby-source-shopify-test-shop.myshopify.com'.
-        shopName:'chirofoam-dev',
+        shopName:'chirofoam-dev.myshopify.com',
 
         // An API access token to your Shopify shop. This is required.
         // You can generate an access token in the "Manage private apps" section
