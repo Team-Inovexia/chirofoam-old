@@ -1,8 +1,9 @@
-import React from 'react';
+import React from 'react'
 import {Link} from "gatsby"
 import Header from "../components/header"
 import Footer from "../components/footer"
-import {Container, Row, Col} from 'reactstrap';
+import {Container, Row, Col} from 'reactstrap'
+import SEO from '~/components/seo'
 import mattress_size from "../assets/img/mattress-size.png"
 import xl_twin_size from "../assets/img/xl-twin-size.png"
 import full_size from "../assets/img/full-size.png"
@@ -202,4 +203,4 @@ export default(props) => {
     </Container>
   </section> </ScrollAnimation>
 		<Footer /> </>);
-};
+}
