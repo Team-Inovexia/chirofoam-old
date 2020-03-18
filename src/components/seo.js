@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import logo from "../assets/img/logo-home.png";
 function SEO({ description, image, lang, meta, keywords, title }) {
   return (
     <StaticQuery
@@ -11,7 +10,7 @@ function SEO({ description, image, lang, meta, keywords, title }) {
         const metaDescription =
           description || data.site.siteMetadata.description
         const ogImage =
-            image || logo
+            image || "../assets/img/logo-home.png"
         return (
           <Helmet
             htmlAttributes={{
