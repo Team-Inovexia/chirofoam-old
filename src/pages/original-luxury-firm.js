@@ -4,7 +4,6 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import {Container, Row, Col, Media} from 'reactstrap';
 import "../assets/css/bootstrap.min.css"
-import "../assets/css/custom.css"
 import product1 from "../assets/img/product1.jpg"
 import warranty from "../assets/img/waranty.png"
 import van from "../assets/img/van.png"
@@ -102,7 +101,7 @@ export default (props) => {
 					    </div>
 					  </div>
 					</Col>
-					<Col sm="6" className="pl-0 pl-sm-5 color-primary pt-4 pt-sm-0 col-12">	
+					<Col sm="6" className="pl-0 pl-sm-5 color-primary pt-4 pt-sm-0 col-12">
 						<h3 className="erbaum-bold pb-3 color-primary">THE ORIGINAL CHIROFOAM<sup style={{fontSize:'16px'}}>TM</sup> MATTRESS - LUXURY FIRM</h3>
 						<p className="filson-pro-reg space-1 col-sm-12 col-lg-7 col-12 px-0" style={{fontSize:'14px'}}>The Original Chirofoam Memory Foam Mattress is designed to increase muscle recovery to help keep you performing at your best. Made in Toronto, ON. Upgrade your sleep today!</p>
 						<p className="filson-pro-reg space-1 col-sm-12 col-lg-7 col-12 px-0" style={{fontSize:'14px'}}>Ideal for all sleeping positions.</p>
@@ -206,7 +205,7 @@ export default (props) => {
 					<Media className="px-3 px-sm-5 mb-1 d-block d-sm-flex">
 						  <Media left middle>
 							<h4 className="lead-text-font color-primary erbaum-bold display-5 d-none">HEADING</h4>
-							<p className="color-primary proxima-r space-1" style={{paddingTop:'30px', lineHeight:'30px'}}>CertiPUR-US® approved foams are made without ozone depleters, made without PBDE flame retardants made without mercury, lead and other heavy metals, made without formaldehyde. </p>	
+							<p className="color-primary proxima-r space-1" style={{paddingTop:'30px', lineHeight:'30px'}}>CertiPUR-US® approved foams are made without ozone depleters, made without PBDE flame retardants made without mercury, lead and other heavy metals, made without formaldehyde. </p>
 						  </Media>
 						  <Media body middle className="pl-sm-4 pl-0 pb-3">
 							  <img src={us} alt="us" width="150px"/>
@@ -214,7 +213,7 @@ export default (props) => {
 					</Media>
 					<Media className="px-3 px-sm-5 mb-1 d-block d-sm-flex">
 						  <Media left middle>
-							<p className="color-primary proxima-r space-1" style={{paddingTop:'30px', lineHeight:'30px'}}>Eco institut tested for emission analysis in the test chamber according to ISO 16000. compound analyses for heavy metals. AOX/EOX, biocides, phthalates, flame retatdants etc... odour testing according to VDA, toxicological and ecological expertise.</p>	
+							<p className="color-primary proxima-r space-1" style={{paddingTop:'30px', lineHeight:'30px'}}>Eco institut tested for emission analysis in the test chamber according to ISO 16000. compound analyses for heavy metals. AOX/EOX, biocides, phthalates, flame retatdants etc... odour testing according to VDA, toxicological and ecological expertise.</p>
 						  </Media>
 						  <Media body middle className="pl-sm-4 pl-0 pb-3">
 							  <img src={eco} alt="eco" width="150px"/>
@@ -222,7 +221,7 @@ export default (props) => {
 					</Media>
 					<Media className="px-3 px-sm-5 mb-1 d-block d-sm-flex">
 						  <Media left middle>
-							<p className="color-primary proxima-r space-1" style={{paddingTop:'30px', lineHeight:'30px'}}>Confidence In Textile Oeko-Tex® standard 100 certified provide extensive testing on the fabrics to ensure that no substances are present that could be harmful to human. Oeko-Tex® standard 100 is an international certification that set limits for over 100 harmful chemicals, substances, and emissions in textiles.</p>	
+							<p className="color-primary proxima-r space-1" style={{paddingTop:'30px', lineHeight:'30px'}}>Confidence In Textile Oeko-Tex® standard 100 certified provide extensive testing on the fabrics to ensure that no substances are present that could be harmful to human. Oeko-Tex® standard 100 is an international certification that set limits for over 100 harmful chemicals, substances, and emissions in textiles.</p>
 						  </Media>
 						  <Media body middle className="pl-sm-4 pl-0 pb-3">
 							  <img src={confidence} alt="confidence" width="150px"/>

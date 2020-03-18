@@ -21,7 +21,7 @@ import SlickSlider from "../components/FiveKeys"
 import ScrollAnimation from 'react-animate-on-scroll'
 
 export default (props) => {
-	
+
   return (
 	<>
 		<SEO title="Home" />
@@ -37,12 +37,12 @@ export default (props) => {
 						<p className="proxima-eb color-primary space-1 pb-0 pb-sm-3 pb-lg-3 pb-xl-3 text-1">
 							"Chirofoam is a premuim memory foam matttress designed with 5 key features consumers voted most important in a new mattress. Created by industry experts, for atheletes and individuals seeking better performance through a better sleep.
 						</p>
-						
+
 						<p className="proxima-eb color-primary space-1 pb-0 pb-sm-0 pb-lg-0 pb-xl-0 mb-sm-2 mb-lg-2 mb-xl-2 text-1">
 							Try the world-class rated mattress with free continetal USA and Canada-wide delivery, and a 100-night sleep trial."
 						</p>
 						<p className="cta mt-0 pt-sm-2 pt-lg-2 pt-xl-2 d-none">
-							<Link to="#" className="btn-cta color-primary erbaum-bold space-1">CALL TO ACTION </Link>
+							<button className="btn-cta bg-transparent border-0 color-primary erbaum-bold space-1">CALL TO ACTION </button>
 						</p>
 					</Col>
 					<Col sm="12" className="col-md-6 col-lg-6 col-xl-6 px-0 px-sm-0 px-md-2 px-lg-3 px-xl-4">
@@ -95,7 +95,7 @@ export default (props) => {
 									<p className="filson-pro-reg text-1 pt-3">Bio Foam Support Core</p>
 			 				 		<img src={circle1} alt="Bio Foam Support Core" width="150px" height="150px" />
 			 				 	</div>
-			 				 	
+
 			 				 </div>
 						</div>
 						<div className="key-tooltip key-tooltip-2">
@@ -104,7 +104,7 @@ export default (props) => {
 									<p className="filson-pro-reg text-1 pt-3">Chirofoam Lumbar Support</p>
 			 				 		<img src={circle4} alt="Chirofoam Lumbar Support" width="150px" height="150px" />
 			 				 	</div>
-			 				 	
+
 			 				 </div>
 						</div>
 						<div className="key-tooltip key-tooltip-3">
@@ -113,7 +113,7 @@ export default (props) => {
 									<p className="filson-pro-reg text-1 pt-3">Firm Support Chirofoam™</p>
 			 				 		<img src={circle5} alt="Firm Support Chirofoam™" width="150px" height="150px" />
 			 				 	</div>
-			 				 	
+
 			 				 </div>
 						</div>
 						<div className="key-tooltip key-tooltip-4">
@@ -122,7 +122,7 @@ export default (props) => {
 									<p className="filson-pro-reg text-1 pt-3">Cool Gel Infused Memory Foam</p>
 			 				 		<img src={circle2} alt="Cool Gel Infused Memory Foam" width="150px" height="150px" />
 			 				 	</div>
-			 				 	
+
 			 				 </div>
 						</div>
 						<div className="key-tooltip key-tooltip-5">
@@ -131,7 +131,7 @@ export default (props) => {
 									<p className="filson-pro-reg text-1 pt-3">Soft Cotton Cover with Ultra Durable Denim Border</p>
 			 				 		<img src={circle3} alt="Soft Cotton Cover with Ultra Durable Denim Border" width="150px" height="150px" />
 			 				 	</div>
-			 				 	
+
 			 				 </div>
 						</div>
 					</Col>
@@ -151,7 +151,7 @@ export default (props) => {
 							<img src={product1} alt="Product1" width="100%" />
 							<Link to="/product/the-original-chirofoam™-mattress-luxury-firm/"><h3 className="text-left text-sm-left text-lg-right text-xl-right color-primary erbaum-bold pl-0">THE ORIGINAL CHIROFOAM™ MATTRESS - LUXURY FIRM</h3></Link>
 							<p className="text-left text-sm-left text-lg-right text-xl-right color-primary proxima-eb space-1 pt-1 mb-0 text-1">
-								The Original Chirofoam Memory Foam Mattress is designed to increase muscle recovery to help keep you performing at your best. Made in Toronto, ON. 
+								The Original Chirofoam Memory Foam Mattress is designed to increase muscle recovery to help keep you performing at your best. Made in Toronto, ON.
 							</p><br/>
 							<p className="text-left text-sm-left text-lg-right color-primary proxima-eb space-1 mb-0 text-1">
 								Upgrade your sleep today!
@@ -170,7 +170,7 @@ export default (props) => {
 							<Link to="/product/the-original-chirofoam™-mattress-luxury-firm/" className="btn-cta color-primary erbaum-bold space-1">BUY NOW</Link>
 						</p>
 					</Col>
-					
+
 					<Col sm="12" className="col-lg-6 col-xl-6 pl-0 pl-sm-0 pl-lg-2 pl-xl-2 position-relative mt-sm-5 mt-lg-0 mt-xl-0">
 						<div className="pl-0 pl-sm-0 pl-lg-5 pl-xl-5 ml-0 ml-sm-0 ml-lg-4 ml-xl-4">
 							<img src={product2} alt="Product2" width="100%" />
@@ -199,11 +199,11 @@ export default (props) => {
 			</div>
 </ScrollAnimation>
 		</section>
-		
+
 		<div className="homepage-slider-2">
-			
+
 			<HomePageSlider2 />
-				
+
 		</div>
 		<section className="py-5 pt-sm-5 px-0 our-customer">
 			<ScrollAnimation animateIn="fadeInUp">
