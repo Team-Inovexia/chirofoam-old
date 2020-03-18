@@ -19,7 +19,7 @@ import {
 import SEO from '~/components/seo'
 import atob from "atob"
 import "~/assets/css/bootstrap.min.css"
-import "~/assets/js/custom.js"
+import "~/assets/js/custom.min.js"
 import ScrollAnimation from 'react-animate-on-scroll'
 
 const Reviews = (props) => {

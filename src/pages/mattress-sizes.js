@@ -94,7 +94,7 @@ export default (props) => {
 					</div>
 					<div className="all-mattress text-center mb-2 mb-sm-5 pb-0 pb-sm-5">
 						<img src={xl_twin_size} alt="XL Twin Size"/>
-						<h4 className="space-1 color-primary erbaum-bold text-uppercase py-2 py-sm-5 mb-0"><ScrollAnimation animateIn="fadeInUp">Twin XL Mattress</h4></ScrollAnimation>
+						<ScrollAnimation animateIn="fadeInUp"><h4 className="space-1 color-primary erbaum-bold text-uppercase py-2 py-sm-5 mb-0">Twin XL Mattress</h4></ScrollAnimation>
 						<ScrollAnimation animateIn="fadeInUp"><p className="mattress-desc space-3 proxima-r color-primary m-auto text-center px-0 pb-2 pb-sm-5">Spanning 39 inches wide and 80 inches in length, the twin XL mattress is perfect for those living in an apartment with a necessity to maximize a minimal amount of bedroom space.  This size mattress is slightly bigger than the twin (by 5 inches in length) and is a popular size choice for teenagers or college students.</p></ScrollAnimation>
 						<p className="cta mt-0 pt-sm-0 pt-lg-0 pt-xl-0 mb-sm-2">
 							<Link to="/shop-chirofoam/" className="btn-cta color-primary erbaum-bold space-1 mr-3">SHOP – SINGLE XL/TWIN XL SIZE</Link>

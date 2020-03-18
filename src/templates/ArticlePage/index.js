@@ -25,7 +25,7 @@ import {
   TwitterIcon
 } from "react-share"
 import "~/assets/css/bootstrap.min.css"
-import "~/assets/js/custom.js"
+import "~/assets/js/custom.min.js"
 
 const ArticlePage = ({data}) => {
   const URL = typeof window !== 'undefined'
