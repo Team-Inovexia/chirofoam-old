@@ -15,6 +15,7 @@
     "btoa": "^1.2.1",
     "body-parser": "^1.19.0",
     "browser-sync": "^2.26.7",
+    "core-js": "^3.6.4",
     "gatsby": "^2.19.17",
     "gatsby-cli": "^2.10.7",
     "gatsby-image": "^2.2.29",
