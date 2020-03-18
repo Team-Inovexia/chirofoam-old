@@ -3,7 +3,6 @@ import Banner from "../components/banner"
 import Footer from "../components/footer"
 import {Container, Row, Col, Media} from 'reactstrap';
 import SEO from '~/components/seo'
-import "../assets/css/bootstrap.min.css"
 import mattress1 from "../assets/img/mattress1.jpg"
 import active from "../assets/img/activelife.jpg"
 import product1 from "../assets/img/product1.jpg"
