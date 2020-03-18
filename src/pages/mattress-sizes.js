@@ -12,8 +12,7 @@ import cali_king from "../assets/img/cali-king-size.png"
 import ScrollAnimation from 'react-animate-on-scroll'
 
 export default(props) => {
-  return (<> <SEO title
-        "ONE MATTRESS SIZE DOES NOT FIT ALL" description="Choosing a mattress online without testing it for yourself can prove challenging. Bed selection differs between buyer preference as well as space available in varying bedrooms." /><Header /><section className="py-5 mattress-section1" style={{
+  return (<> <SEO title="ONE MATTRESS SIZE DOES NOT FIT ALL" description="Choosing a mattress online without testing it for yourself can prove challenging. Bed selection differs between buyer preference as well as space available in varying bedrooms." /><Header /><section className="py-5 mattress-section1" style={{
       backgroundColor: '#efefef'
     }} > <Container>
     <Row>
