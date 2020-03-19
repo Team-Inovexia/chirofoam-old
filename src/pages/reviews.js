@@ -176,7 +176,7 @@ const Reviews = (props) => {
             response.json().then((responseJson) => {
               setResponseVisible(true)
               setResponseColor("success")
-              setResponseContent(<strong>{responseJson.message}</strong>)
+              setResponseContent(<div>{responseJson.message}<strong>&nbsp;successfully</strong>.</div>)
               reviewForm.reset()
               setProductRating(0)
               const spans = document.querySelectorAll(".rating-starts button span")
