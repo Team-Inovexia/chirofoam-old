@@ -119,7 +119,7 @@ const TAKETEST = (props) => {
   <section className="mb-0 py-5 bg-white position-relative d-none" id="take-test">
     <div className="container-large no-gutters">
       <div className="col-md-12">
-        <Nav tabs="tabs" id="tabs" className="d-flex all-steps">
+        <Nav tabs={true} id="tabs" className="d-flex all-steps">
           <NavItem className={(
               activeTab === '1'
               ? 'active '
@@ -567,7 +567,7 @@ const TAKETEST = (props) => {
     </Container>
   </section>
 
-  <Footer/>
+  <Footer disabletest={true}/>
 </>)
 }
 export default TAKETEST
