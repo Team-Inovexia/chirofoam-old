@@ -1575,7 +1575,7 @@ body .key-tooltip-5{
 	border: 1px solid #eee;
 	padding:15px;
 }
-.comment-form form input{
+.comment-form form input, .comment-form form .g-recaptcha{
 	margin-top:10px;
 }
 .input-data-field .col:nth-child(2){

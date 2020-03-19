@@ -143,7 +143,7 @@ const ArticlePage = ({data}) => {
               setResponseVisible(true)
               setResponseColor("success")
               setResponseContent(<div>Your comment has been submitted
-                <strong>Successfully</strong>
+                <strong>&nbsp;Successfully&nbsp;</strong>
                 and will be published soon.</div>)
               resetRecaptcha()
               setSubmitting(false)
@@ -369,7 +369,9 @@ const ArticlePage = ({data}) => {
       }}>LEAVE A COMMENT</h3>
     <Row className="mx-0">
       <div className="comment-form w-100">
-        {response}
+        <Col className="col-12">
+          {response}
+        </Col>
         <form onSubmit={e => handlePostComment(e)}>
           <Col className="col-12">
             <textarea name="body" id="body" placeholder="LEAVE YOUR COMMENT" className="w-100 text-1 color-secondary filson-pro-reg" rows="10"/>
