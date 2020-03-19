@@ -13,7 +13,6 @@ import product2 from "../assets/img/product2.jpg"
 import ScrollAnimation from 'react-animate-on-scroll'
 
 const shopChirofoam = props => {
-  console.log(Element)
   return (
 	<>
 		<SEO title="SHOP CHIROFOAM™" />
