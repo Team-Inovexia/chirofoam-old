@@ -11,7 +11,16 @@ const Banner = () => (
 					<span className="erbaum-bold color-primary space-1">SHOP</span>
 					<h2 className="shop-banner-title erbaum-bold color-primary">CHIROFOAM</h2>
 					<p className="cta mt-0 pt-sm-5 pt-lg-5 pt-xl-5">
-            <Button activeClass="active" className="btn-cta color-primary erbaum-bold space-1" to="product" spy={true} hashSpy={true} smooth={true} duration={250}>BUY NOW</Button>
+            <Button
+              activeClass="active"
+              className="btn-cta color-primary erbaum-bold space-1"
+              type="button"
+              value="BUY NOW"
+              to="product"
+              spy={true}
+              smooth={true}
+              duration={250}
+            />
 					</p>
 				</Col>
 				<Col md="5">
