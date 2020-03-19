@@ -1,7 +1,8 @@
 import React from "react"
 import {Link} from "gatsby"
 
-const Stickytest = () => {
+const Stickytest = (props) => {
+  console.log(props)
 	const openTakeTest = () => {
 		document.querySelector(".test-slider-content").classList.remove('hidden')
 		document.querySelector(".test-slider-content").classList.add('show')
