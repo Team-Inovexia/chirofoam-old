@@ -9,5 +9,4 @@ const spyButton = props => {
     </button>
   )
 }
-
-module.exports = ScrollLink(spyButton);
+export default ScrollLink(spyButton)
