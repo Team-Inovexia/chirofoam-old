@@ -1,7 +1,8 @@
 import React from "react"
 import {Link} from "gatsby"
 
-const Stickytest = () => {
+const Stickytest = (props) => {
+  const wrapperClass = (props.disable)?"d-none":"sticky-test position-fixed"
 	const openTakeTest = () => {
 		document.querySelector(".test-slider-content").classList.remove('hidden')
 		document.querySelector(".test-slider-content").classList.add('show')
@@ -11,7 +12,7 @@ const Stickytest = () => {
 		document.querySelector(".test-slider-content").classList.remove('show')
 	}
 	return(
-		<div className="sticky-test position-fixed">
+		<div className={wrapperClass}>
 			<div className="test-content-slider-tab">
 				<div className="test-content-slider-title">
 					<button className="fs-1 fs-lg-2 py-1 px-2 py-lg-2 px-lg-3 proxima-b" onClick={openTakeTest}>Take The Chirofoam Test</button>

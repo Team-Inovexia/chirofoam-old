@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import {Row, Col} from 'reactstrap';
 
-const RecentPosts = ({ location, RecentPostsId }) => {
+const RecentPosts = () => {
   const { allShopifyArticle } = useStaticQuery(
     graphql`
       query {
@@ -31,7 +31,7 @@ const RecentPosts = ({ location, RecentPostsId }) => {
   )
 
   return (
-   
+
           <Row>
           {allShopifyArticle.edges
             ? allShopifyArticle.edges.map(({ node: {id, url, blog, title, content, excerpt, publishedAt, image } }) => (
@@ -46,13 +46,13 @@ const RecentPosts = ({ location, RecentPostsId }) => {
                 <h4 className="text-uppercase erbaum p-2 m-0 border-top" style={{fontSize:'12px', color:'#000'}}>{title}</h4>
               </Link>
             </div>
-            
+
           </Col>
            ))
         : <p>No Products found!</p>}
           </Row>
-          
-       
+
+
   )
 }
 

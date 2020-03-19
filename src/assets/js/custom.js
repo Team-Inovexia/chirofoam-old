@@ -18,10 +18,4 @@
       window.addEventListener('load', asyncLoad, false);
     }
   }
-  if (typeof document !== 'undefined') {
-    var po = document.createElement('script');
-    po.type = 'text/javascript';
-    po.src = '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e5a59d03affc180';
-    document.body.appendChild(po);
-  }
 })();

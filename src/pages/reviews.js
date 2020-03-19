@@ -44,8 +44,14 @@ const Reviews = (props) => {
   const [responseColor, setResponseColor] = useState("")
   const [responseContent, setResponseContent] = useState(false)
   const [responseVisible, setResponseVisible] = useState(false)
+  const [responseErrorVisible, setResponseErrorVisible] = useState(false)
+
   const dismissResponse = () => {
     setResponseVisible(false)
+    setResponseContent(false)
+  }
+  const dismissErrorResponse = () => {
+    setResponseErrorVisible(false)
     setResponseContent(false)
   }
   const closeModal = () => setModal(false)
@@ -111,6 +117,7 @@ const Reviews = (props) => {
       }
     }`)
   const response = <Alert className="rounded-0" isOpen={responseVisible} toggle={dismissResponse} color={responseColor}>{responseContent}</Alert>
+  const response_Error = <Alert className="rounded-0" isOpen={responseErrorVisible} toggle={dismissErrorResponse} color={responseColor}>{responseContent}</Alert>
   const handleLoadMore = () => {
     if (data.length >= showReviews) {
       setLoadingReviews(true)
@@ -128,11 +135,11 @@ const Reviews = (props) => {
   }
   const verifyCaptcha = () => {
     setResponseColor("")
-    dismissResponse()
+    dismissErrorResponse()
     setVerified(true)
   }
   const expiredCaptcha = () => {
-    setResponseVisible(true)
+    setResponseErrorVisible(true)
     setResponseColor("warning")
     setResponseContent(<div>
       <strong>Verification Expired!&nbsp;</strong>Check the Checkbox Again.</div>)
@@ -169,7 +176,7 @@ const Reviews = (props) => {
             response.json().then((responseJson) => {
               setResponseVisible(true)
               setResponseColor("success")
-              setResponseContent(<strong>{responseJson.message}</strong>)
+              setResponseContent(<div>{responseJson.message}<strong>&nbsp;successfully</strong>.</div>)
               reviewForm.reset()
               setProductRating(0)
               const spans = document.querySelectorAll(".rating-starts button span")
@@ -179,10 +186,11 @@ const Reviews = (props) => {
               })
               resetRecaptcha()
               setSubmitting(false)
+              closeModal()
             })
           } else if (response.status === 422) {
             response.json().then((responseJson) => {
-              setResponseVisible(true)
+              setResponseErrorVisible(true)
               setResponseColor("warning")
               setResponseContent(<><strong> {
                 responseJson.message
@@ -198,7 +206,7 @@ const Reviews = (props) => {
       }
       sendReview(`//reviews.hulkapps.com/api/shop/${shopID}/reviews`)
     } else {
-      setResponseVisible(true)
+      setResponseErrorVisible(true)
       setResponseColor("warning")
       setResponseContent(<div>
         <strong>Verify!&nbsp;</strong>
@@ -390,6 +398,7 @@ const Reviews = (props) => {
             <TabPane tabId="2">
               <div id="tabsContent" className="tab-content border border-top-0">
                 <div id="leave-review" className="m-auto py-5 col-12 col-sm-10 col-lg-10 col-xl-10 p-0 px-sm-2">
+                  {response}
                   <Row>
                     <div className="col-12 col-md-10 col-lg-8 col-xl-6 m-auto select-mattress">
                       <Row className="no-gutters">
@@ -459,7 +468,7 @@ const Reviews = (props) => {
             <h6 className="card-title mb-0 text-center">{productTitle}</h6>
           </div>
           <div className="card-body">
-            {response}
+            {response_Error}
             <div className="form-row">
               <div className="col-6 form-group">
                 <input type="text" className="form-control rounded-0" name="author" placeholder="Name" required={true}/>

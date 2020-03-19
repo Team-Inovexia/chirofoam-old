@@ -143,7 +143,7 @@ const ArticlePage = ({data}) => {
               setResponseVisible(true)
               setResponseColor("success")
               setResponseContent(<div>Your comment has been submitted
-                <strong>Successfully</strong>
+                <strong>&nbsp;Successfully&nbsp;</strong>
                 and will be published soon.</div>)
               resetRecaptcha()
               setSubmitting(false)
@@ -259,8 +259,8 @@ const ArticlePage = ({data}) => {
               }}/>
           </div>
           <h2 className="mb-3 color-primary text-uppercase erbaum-bold pt-4 space-1">{article.title}</h2>
-          <div className="media">
-            <div className="media-left my-auto">
+          <div className="d-block d-sm-flex">
+            <div className="mb-3 my-sm-auto">
               <p className="mb-0" style={{
                   fontSize: '12px'
                 }}>By
@@ -271,9 +271,7 @@ const ArticlePage = ({data}) => {
                 <span>{article.publishedAt}</span>
               </p>
             </div>
-            <div className="media-body my-auto text-left text-sm-right text-lg-right text-xl-right" style={{
-                display: 'ruby'
-              }}>
+            <div className="flex-fill my-auto text-right text-sm-right text-lg-right text-xl-right">
               <button id="share" style={{
                   color: 'rgba(0,0,0,0.4)'
                 }} className="bg-transparent border-0 outline-none ml-0 ml-sm-0 ml-lg-4 ml-xl-4">
@@ -371,7 +369,9 @@ const ArticlePage = ({data}) => {
       }}>LEAVE A COMMENT</h3>
     <Row className="mx-0">
       <div className="comment-form w-100">
-        {response}
+        <Col className="col-12">
+          {response}
+        </Col>
         <form onSubmit={e => handlePostComment(e)}>
           <Col className="col-12">
             <textarea name="body" id="body" placeholder="LEAVE YOUR COMMENT" className="w-100 text-1 color-secondary filson-pro-reg" rows="10"/>
