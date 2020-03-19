@@ -389,7 +389,7 @@ const ArticlePage = ({data}) => {
           </Row>
           <Row className="mx-0 input-data-field">
             <Col className="col-12">
-              <Recaptcha className="d-md-block d-flex justify-content-center" ref={e => recaptchaReference(e)} sitekey="6LcWuNwUAAAAAM1qrJeF08ksnyt_l-MFIQ9oXJj4" render="explicit" verifyCallback={verifyCaptcha} expiredCallback={expiredCaptcha}/>
+              <Recaptcha ref={e => recaptchaReference(e)} sitekey="6LcWuNwUAAAAAM1qrJeF08ksnyt_l-MFIQ9oXJj4" render="explicit" verifyCallback={verifyCaptcha} expiredCallback={expiredCaptcha}/>
             </Col>
           </Row>
           <Row className="mx-0 input-data-field">
