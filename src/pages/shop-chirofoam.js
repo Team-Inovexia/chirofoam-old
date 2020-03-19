@@ -40,7 +40,7 @@ export default (props) => {
 		</ScrollAnimation>
 		</section>
 
-		<section className="py-4 pt-sm-4 pt-lg-4 pt-xl-4 pb-sm-4 pb-lg-4 pb-xl-4 mb-0 mb-sm-3 mb-lg-3 mb-xl-3 mattresses">
+		<section id="product" className="py-4 pt-sm-4 pt-lg-4 pt-xl-4 pb-sm-4 pb-lg-4 pb-xl-4 mb-0 mb-sm-3 mb-lg-3 mb-xl-3 mattresses">
 			<div className="pt-0 pt-sm-5 container-large">
 				<ScrollAnimation animateIn="fadeInUp"><h3 className="text-center lead-text lead-sm-text lead-md-text lead-lg-text lead-xl-text color-primary erbaum-bold display-5 w-100">THE COMFORT AND SUPPORT YOU NEED FOR A BETTER SLEEP</h3></ScrollAnimation>
 				<ScrollAnimation animateIn="fadeInUp"><p className="col-12 col-sm-7 text-center pb-4 pb-sm-5 px-0 px-sm-2 pt-1 mb-5 color-primary proxima-b space-1 m-auto sub-text sub-sm-text sub-md-text sub-xl-text">We have two models to choose from. Whatever your needs are, Chirofoam has your back!</p></ScrollAnimation>

@@ -8,7 +8,6 @@ import bbb from "../assets/img/bbb.png"
 
 const Footer = props => {
   const disabletest = (props.disabletest!==undefined)?props.disabletest:false;
-  console.log(disabletest)
   return (
 	<footer className="footer py-0 py-sm-5" style={{ backgroundColor: '#243b6a', borderRadius: '0', color: '#fff' }}>
 		<Stickytest disable={disabletest}/>
