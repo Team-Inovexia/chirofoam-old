@@ -70,7 +70,7 @@ const HomePageSlider2 = (props) => {
         }}>TM</sup>
                   mattresses are designed by Chiropractors to improve posture, and provide incredible pressure relief. Your back will thank you.</p>
                 <p className="cta mt-3 mt-sm-0 mt-lg-0 mt-xl-0 pt-sm-0 pt-lg-0 pt-xl-0 mb-sm-2">
-                  <button className="btn-cta bg-transparent text-white erbaum-bold space-1 border-0">CALL TO ACTION
+                  <button className="btn-cta bg-transparent outline-none text-white erbaum-bold space-1 border-0">CALL TO ACTION
                   </button>
                 </p>
               </div>

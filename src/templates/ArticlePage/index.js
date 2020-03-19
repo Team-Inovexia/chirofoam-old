@@ -259,8 +259,8 @@ const ArticlePage = ({data}) => {
               }}/>
           </div>
           <h2 className="mb-3 color-primary text-uppercase erbaum-bold pt-4 space-1">{article.title}</h2>
-          <div className="media">
-            <div className="media-left my-auto">
+          <div className="d-block d-sm-flex">
+            <div className="mb-3 my-sm-auto">
               <p className="mb-0" style={{
                   fontSize: '12px'
                 }}>By
@@ -271,9 +271,7 @@ const ArticlePage = ({data}) => {
                 <span>{article.publishedAt}</span>
               </p>
             </div>
-            <div className="media-body my-auto text-left text-sm-right text-lg-right text-xl-right" style={{
-                display: 'ruby'
-              }}>
+            <div className="flex-fill my-auto text-right text-sm-right text-lg-right text-xl-right">
               <button id="share" style={{
                   color: 'rgba(0,0,0,0.4)'
                 }} className="bg-transparent border-0 outline-none ml-0 ml-sm-0 ml-lg-4 ml-xl-4">
