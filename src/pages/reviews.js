@@ -179,6 +179,7 @@ const Reviews = (props) => {
               })
               resetRecaptcha()
               setSubmitting(false)
+              closeModal()
             })
           } else if (response.status === 422) {
             response.json().then((responseJson) => {
@@ -392,6 +393,7 @@ const Reviews = (props) => {
                 <div id="leave-review" className="m-auto py-5 col-12 col-sm-10 col-lg-10 col-xl-10 p-0 px-sm-2">
                   <Row>
                     <div className="col-12 col-md-10 col-lg-8 col-xl-6 m-auto select-mattress">
+                      {response}
                       <Row className="no-gutters">
                         {
                           allShopifyProduct.nodes.map((item, i) => (<div key={i} className="col-md-6 col-10 mx-auto">
@@ -459,7 +461,6 @@ const Reviews = (props) => {
             <h6 className="card-title mb-0 text-center">{productTitle}</h6>
           </div>
           <div className="card-body">
-            {response}
             <div className="form-row">
               <div className="col-6 form-group">
                 <input type="text" className="form-control rounded-0" name="author" placeholder="Name" required={true}/>
