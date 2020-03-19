@@ -391,9 +391,9 @@ const Reviews = (props) => {
             <TabPane tabId="2">
               <div id="tabsContent" className="tab-content border border-top-0">
                 <div id="leave-review" className="m-auto py-5 col-12 col-sm-10 col-lg-10 col-xl-10 p-0 px-sm-2">
+                  {response}
                   <Row>
                     <div className="col-12 col-md-10 col-lg-8 col-xl-6 m-auto select-mattress">
-                      {response}
                       <Row className="no-gutters">
                         {
                           allShopifyProduct.nodes.map((item, i) => (<div key={i} className="col-md-6 col-10 mx-auto">
