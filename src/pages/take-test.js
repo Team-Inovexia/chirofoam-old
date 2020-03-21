@@ -457,19 +457,19 @@ const TAKETEST = (props) => {
             The Chirofoam Mattress looks like it will be the ideal fit for you based on the answers you provided. You matched up well on all your answers!
           </div>
           <h3>Results</h3>
-          <ul className="list-unstyled">
+          <ol className="pl-4">
             {
               selectedChoices.map((step, i) => <li key={i}>
-                <strong>{step.id}&nbsp;</strong>
+                <strong>{step.id}</strong>
                 <span>{step.choiceLabel}</span>
               </li>)
             }
-          </ul>
+          </ol>
           <div id="success" className="d-none">
             <div className="tip_div">
               <p>
                 <em>Note:-
-                </em>The Chirofoam Mattress looks like it will be the ideal fit for you based on the answers you provided. You matched up well on all your answers!</p>
+                </em>&nbsp; The Chirofoam Mattress looks like it will be the ideal fit for you based on the answers you provided. You matched up well on all your answers!</p>
             </div>
           </div>
           <div id="xf-block" className="d-none">
@@ -514,7 +514,7 @@ const TAKETEST = (props) => {
             <div className="tip_div">
               <p>
                 <em>Tip:
-                </em>If you sleep with a partner, let them take the test to see if your results match up.</p>
+                </em>&nbsp;If you sleep with a partner, let them take the test to see if your results match up.</p>
               <p>As always, your purchase comes with a 100-night sleep trial, making it easy to return the Chirofoam mattress within 100 nights if you are not 100% satisfied!</p>
             </div>
           </div>
