@@ -460,7 +460,6 @@ const TAKETEST = (props) => {
           <ol className="pl-4">
             {
               selectedChoices.map((step, i) => <li key={i}>
-                <strong>{step.id}</strong>
                 <span>{step.choiceLabel}</span>
               </li>)
             }
