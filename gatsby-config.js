@@ -11,7 +11,8 @@ module.exports = {
     author: `@Team-Innovexia`,
   },
   plugins: [
-
+     `gatsby-plugin-offline`,
+    
 
     `gatsby-plugin-react-helmet`,
     {
@@ -91,5 +92,13 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
+
+   
+//   {
+//   resolve: `gatsby-plugin-offline`,
+//   options: {
+//     appendScript: require.resolve(`src/custom-sw-code.js`),
+//   },
+// },
   ],
 }
