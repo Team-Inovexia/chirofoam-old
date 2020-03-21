@@ -460,7 +460,7 @@ const TAKETEST = (props) => {
           <ul className="list-unstyled">
             {
               selectedChoices.map((step, i) => <li key={i}>
-                <strong>{step.id}</strong>
+                <strong>{step.id}&nbsp;</strong>
                 <span>{step.choiceLabel}</span>
               </li>)
             }
