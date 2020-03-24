@@ -273,5 +273,4 @@ const Blogs = ({id}) => {
     }
   </Col>)
 }
-
 export default Blogs
