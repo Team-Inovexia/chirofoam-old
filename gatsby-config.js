@@ -31,6 +31,7 @@ module.exports = {
         background_color: `#243b6b`,
         theme_color: `#243b6b`,
         display: "standalone",
+        ​​orientation: "portrait",
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
@@ -92,11 +93,11 @@ module.exports = {
     // 'gatsby-plugin-offline',
 
    
-//   {
-//   resolve: `gatsby-plugin-offline`,
-//   options: {
-//     appendScript: require.resolve(`src/custom-sw-code.js`),
-//   },
-// },
+  {
+    resolve: `gatsby-plugin-offline`,
+    options: {
+      appendScript: require.resolve(`src/custom-sw-code.js`),
+    },
+  },
   ],
 }
