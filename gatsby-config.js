@@ -28,7 +28,7 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `Chirofoam`,
         start_url: `/`,
-        background_color: `#FFFFFF`,
+        background_color: `#243b6b`,
         theme_color: `#243b6b`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
