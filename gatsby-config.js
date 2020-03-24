@@ -11,7 +11,6 @@ module.exports = {
     author: `@Team-Innovexia`,
   },
   plugins: [
-     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -35,6 +34,7 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-offline',
     {
       resolve: `gatsby-source-shopify`,
       options: {
