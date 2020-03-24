@@ -27,7 +27,7 @@ module.exports = {
       options: {
         name: `gatsby-starter-default`,
         short_name: `Chirofoam`,
-        start_url: `./`,
+        start_url: `/`,
         background_color: `#243b6b`,
         theme_color: `#243b6b`,
         display: `standalone`,
