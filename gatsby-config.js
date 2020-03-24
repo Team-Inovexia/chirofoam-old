@@ -31,7 +31,6 @@ module.exports = {
         background_color: `#243b6b`,
         theme_color: `#243b6b`,
         display: `standalone`,
-        ​​orientation: `portrait`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
