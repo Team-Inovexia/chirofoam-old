@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `Chirofoam`,
         short_name: `Chirofoam`,
         start_url: `/`,
         background_color: `#243b6b`,
