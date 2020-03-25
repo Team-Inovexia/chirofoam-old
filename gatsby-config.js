@@ -11,8 +11,6 @@ module.exports = {
     author: `@Team-Innovexia`,
   },
   plugins: [
-
-
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -27,15 +25,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Chirofoam`,
+        short_name: `Chirofoam`,
         start_url: `/`,
         background_color: `#243b6b`,
         theme_color: `#243b6b`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
+   
+  `gatsby-plugin-offline`,
+ 
     {
       resolve: `gatsby-source-shopify`,
       options: {
@@ -88,8 +89,6 @@ module.exports = {
         respectDNT: true,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
+    
   ],
 }
