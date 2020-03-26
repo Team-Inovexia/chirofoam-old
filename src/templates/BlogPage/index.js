@@ -32,7 +32,6 @@ const BlogPage = ({data}) => {
     ? window.location.origin
     : ''
   const allShopifyArticle = data.allShopifyArticle;
-  const token = "44ad603380756bf8c733a15e818b9837"
   const pageInfo = allShopifyArticle.pageInfo;
   const currentPage = pageInfo.currentPage;
   const previousPage = (currentPage === 1)
@@ -68,11 +67,7 @@ const BlogPage = ({data}) => {
       const reqData = jsonToQueryString(getData)
       const fetchData = async (URL) => {
         return await fetch(URL, {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            "X-Shopify-Access-Token": token
-          }
+          method: 'GET'
         }).then((response) => {
           if (response.status === 200) {
             response.json().then((responseJson) => {
@@ -101,10 +96,6 @@ const BlogPage = ({data}) => {
     const sendLike = async (URL) => {
       return await fetch(URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          "X-Shopify-Access-Token": token
-        },
         body: JSON.stringify(data)
       }).then((response) => {
         if (response.status === 200) {

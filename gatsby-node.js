@@ -65,13 +65,13 @@ exports.createPages = ({ graphql, actions }) => {
 }
 exports.onCreateDevServer = ({ app }) => {
   const hostname = "chirofoam-dev.myshopify.com"
+  const Access_Token = "44ad603380756bf8c733a15e818b9837"
+  const Content_Type = "application/json"
   app.use(bodyParser.urlencoded({
     extended: false
   }))
   app.use(bodyParser.json())
   app.get('/api-call', (req, res) => {
-    const Access_Token = req.headers['X-Shopify-Access-Token'.toLowerCase()]
-    const Content_Type = req.headers['content-type']
     const apiURL = req.query.api
     delete req.query.api
     const queryString = '?' + Object.keys(req.query).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(req.query[key])).join('&')
@@ -98,8 +98,6 @@ exports.onCreateDevServer = ({ app }) => {
     request.end()
   })
   app.post('/api-call', (req, res) => {
-    const Access_Token = req.headers['X-Shopify-Access-Token'.toLowerCase()]
-    const Content_Type = req.headers['content-type']
     const apiURL = req.body.api
     delete req.body.api
     const options = {
