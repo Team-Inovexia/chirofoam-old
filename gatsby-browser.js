@@ -10,3 +10,14 @@ import "./src/assets/css/custom.min.css"
 import "./src/assets/css/responsive.min.css"
 import "./src/assets/css/font-awesome.min.css"
 import "./src/fonts/fonts.min.css"
+
+
+export const onServiceWorkerUpdateReady = () => {
+  const answer = window.confirm(
+    `This application has been updated. ` +
+      `Reload to display the latest version?`
+  )
+  if (answer === true) {
+    window.location.reload()
+  }
+}
