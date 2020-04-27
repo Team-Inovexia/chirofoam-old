@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
+        name: `Chirofoam`,
         short_name: `Chirofoam`,
         start_url: `/`,
         background_color: `#243b6b`,
@@ -34,7 +34,9 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline',
+   
+  `gatsby-plugin-offline`,
+ 
     {
       resolve: `gatsby-source-shopify`,
       options: {
@@ -87,9 +89,6 @@ module.exports = {
         respectDNT: true,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
-  
+    
   ],
 }
