@@ -200,7 +200,7 @@ p.cta.erbaum.position-absolute {
 	font-size: 34px;
 }
 .home-banner {
-	background-image: url('../img/player.jpg');
+	background-image: url('../img/player.webp');
 	height:700px;
   background-color: #151e3f;
 }
@@ -218,7 +218,7 @@ p.cta.erbaum.position-absolute {
 	background-position: center center;
 }
 .keys{
-	background-image:url('../img/home4.jpg');
+	background-image:url('../img/home4.webp');
 }
 /*.card-bg1 {
 	background-image: url('../img/feat1.jpg');
@@ -336,7 +336,7 @@ p.cta.erbaum.position-absolute {
 	font-size: 12px;
 }
 .approved {
-	background-image: url('../img/blue-bg2.jpg');
+	background-image: url('../img/blue-bg2.webp');
 }
 .active-style h2 {
 	font-weight: 1000 !important;
@@ -403,7 +403,7 @@ p.cta.erbaum.position-absolute {
 /*shop-chirofoam-page-css-start*/
 
 .card1 {
-	background-image: url('../img/home4.jpg');
+	background-image: url('../img/home4.webp');
 	height: 300px;
 }
 .card2 {
