@@ -95,7 +95,7 @@ module.exports = {
     options: {
       sitemapSize: 5000
     }
-  }
+  },
   {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
