@@ -6,6 +6,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://chirofoam-dev.netlify.app`,
     title: `Chirofoam™ Memory Foam Mattress`,
     description: `The Chirofoam™ Memory Foam Mattress is designed to get you a more effective and efficient sleep, and helps to relieve back pain. Made in Toronto, ON.`,
     author: `@Team-Innovexia`,
@@ -89,6 +90,50 @@ module.exports = {
         respectDNT: true,
       },
     },
+    {
+    resolve: `gatsby-plugin-sitemap`,
+    options: {
+      output: `/sitemap.xml`,
+      // Exclude specific pages or groups of pages using glob parameters
+      // See: https://github.com/isaacs/minimatch
+      // The example below will exclude the single `path/to/page` and all routes beginning with `category`
+      exclude: [`/category/*`, `/path/to/page`],
+      query: `
+        {
+          wp {
+            generalSettings {
+              siteUrl
+            }
+          }
+
+          allSitePage {
+            node {
+              path
+            }
+          }
+      }`,
+      resolveSiteUrl: ({site, allSitePage}) => {
+        //Alternativly, you may also pass in an environment variable (or any location) at the beginning of your `gatsby-config.js`.
+        return site.wp.generalSettings.siteUrl
+      },
+      serialize: ({ site, allSitePage }) =>
+        allSitePage.nodes.map(node => {
+          return {
+            url: `${site.wp.generalSettings.siteUrl}${node.path}`,
+            changefreq: `daily`,
+            priority: 0.7,
+          }
+        })
+    }
+  },
+  {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://chirofoam-dev.netlify.app',
+        sitemap: 'https://chirofoam-dev.netlify.app/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    }
     
   ],
 }
