@@ -13,7 +13,7 @@ const HomeBannerSlider = () => {
     speed: 1000,
     autoplaySpeed: 5000,
     centerMode: false,
-    autoplay: true,
+    autoplay: false,
     slidesToShow: 1,
     slidesToScroll: 1
 
