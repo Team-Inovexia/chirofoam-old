@@ -25,32 +25,32 @@
 @font-face {
 font-family:"filson-pro";
 src:url("filson-pro-700.woff2") format("woff2"),url("filson-pro-700.otf") format("opentype");
-font-display:auto;font-style:italic;font-weight:700;
+font-display:swap;font-style:italic;font-weight:700;
 }
 
 @font-face {
 font-family:"filson-pro";
 src:url("filson-pro-400.woff2") format("woff2"),url("filson-pro-400.otf") format("opentype");
-font-display:auto;font-style:normal;font-weight:400;
+font-display:swap;font-style:normal;font-weight:400;
 }
 
 @font-face {
 font-family:"filson-soft";
 src:url("filson-soft-700.woff2") format("woff2"),url("filson-soft-700.woff") format("woff"),url("filson-soft-700.otf") format("opentype");
-font-display:auto;font-style:normal;font-weight:700;
+font-display:swap;font-style:normal;font-weight:700;
 }
 
 @font-face {
 font-family:"filson-soft";
 src:url("filson-soft-400.woff2") format("woff2"),url("filson-soft-400.woff") format("woff"),url("filson-soft-400.otf") format("opentype");
-font-display:auto;font-style:italic;font-weight:400;
+font-display:swap;font-style:italic;font-weight:400;
 }
 
 
 @font-face {
 font-family:"erbaum";
 src:url("erbaum-400.woff2") format("woff2"),url("erbaum-400.woff") format("woff"),url("erbaum-400.otf") format("opentype");
-font-display:auto;font-style:normal;font-weight:400;
+font-display:swap;font-style:normal;font-weight:400;
 }
 
 .tk-filson-pro { font-family: "filson-pro",sans-serif; }

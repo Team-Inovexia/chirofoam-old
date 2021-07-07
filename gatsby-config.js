@@ -6,6 +6,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://chirofoam-dev.netlify.app`,
     title: `Chirofoam™ Memory Foam Mattress`,
     description: `The Chirofoam™ Memory Foam Mattress is designed to get you a more effective and efficient sleep, and helps to relieve back pain. Made in Toronto, ON.`,
     author: `@Team-Innovexia`,
@@ -89,6 +90,20 @@ module.exports = {
         respectDNT: true,
       },
     },
+    {
+    resolve: `gatsby-plugin-sitemap`,
+    options: {
+      sitemapSize: 5000
+    }
+  },
+  {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://chirofoam-dev.netlify.app',
+        sitemap: 'https://chirofoam-dev.netlify.app/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    }
     
   ],
 }
